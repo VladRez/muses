@@ -12,6 +12,7 @@
 4. Questions
 5. Answers/comments on answers
 6. Search Questions
+    + regex search
 7. Topics/Tags
 
 **Bonus**: Upvotes, order questions by popularity
@@ -22,7 +23,10 @@
 ```js
 store = {
     entities: {
-        questions: {}
-    }
+        questions: {author_id: 'string', title: 'string', body: 'string', category_id: 'string'},
+        answers: {question_id: 'string', author_id: 'string', body: 'string'}
+    },
+    ui: {},
+    errors: {}
 }
 ```
