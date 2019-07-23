@@ -8,27 +8,32 @@ A Quora clone where questions are asked, answered, and edited by users.
 ### Schema
 
 Users
+
 |id|username|password_digest|
 |---|---|---|
 |int|varchar|varchar|
 
 
 Questions
+
 |id|title|body|question_author_id|
 |---|---|---|---|
 |int|varchar|text|int|
 
 Answers
+
 |id|body|answer_author_id|question_id|
 |---|---|---|---|
 |int|text|int|int|
 
 Comments
+
 |id|body|answer_id|comment_author_id|
 |---|---|---|---|
 |int|text|int|int|
 
 Topics
+
 |id|name|
 |---|---|
 |int|varchar|
