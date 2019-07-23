@@ -1,12 +1,40 @@
-# MVP Checklist Format
+# Muses
+
+A Quora clone where questions are asked, answered, and edited by users.
+
+---
+## MVP Checklist Format
+
+### Schema
+
+Users
+|id|username|password_digest|
+|---|---|---|
+|int|varchar|varchar|
+
+
+Questions
+|id|title|body|question_author_id|
+|---|---|---|---|
+|int|varchar|text|int|
+
+Answers
+|id|body|answer_author_id|question_id|
+|---|---|---|---|
+|int|text|int|int|
+
+Topics
+|id|name|
+|---|---|
+|int|varchar|
+
+### Features 
 
 1. New account creation, login, and guest/demo login
-
 + Models
     + User
         + id:integer
         + username:string
-        + password:string
         + password_digest:string
     + User Association
         + has_many: questions
