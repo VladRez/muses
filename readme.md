@@ -1,18 +1,24 @@
-# Muses
+# README
 
-A Quora clone where questions are asked, answered, and edited by users.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
----
-## MVP Checklist
+Things you may want to cover:
 
-+ [Backend Routes and API][1]
-+ [Frontend Routes][2]
-+ [MVP list][3]
-+ [Sample State][4]
-+ [Schema][5]
+* Ruby version
 
-[1]: https://github.com/VladRez/muses/wiki/backend-routes
-[2]: https://github.com/VladRez/muses/wiki/frontend-routes
-[3]: https://github.com/VladRez/muses/wiki/MVP-list
-[4]: https://github.com/VladRez/muses/wiki/sample-state
-[5]: https://github.com/VladRez/muses/wiki/schema
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
