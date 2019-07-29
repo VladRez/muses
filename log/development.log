@@ -569,3 +569,12 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2019-07-29 14:39:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WFTgmcGOnRyWipv3uUq2-w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 122ms (Views: 120.0ms | ActiveRecord: 1.9ms)
+
+
