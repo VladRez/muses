@@ -35,3 +35,160 @@ Migrating to CreateUsers (20190729194103)
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajakubczyk0@tiny.cc"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Appolonia"], ["last_name", "Jakubczyk"], ["email", "ajakubczyk0@tiny.cc"], ["password_digest", "$2a$12$6kdgovsc7PHo.EUY9aqheOKlpPI4QcMdUm18t1pmhZNa0rp9kpiCq"], ["session_token", "BEVegNtuJ6v15bAoj6LReA"], ["created_at", "2019-07-29 20:40:17.483980"], ["updated_at", "2019-07-29 20:40:17.483980"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wbradbrook1@squidoo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Wit"], ["last_name", "Bradbrook"], ["email", "wbradbrook1@squidoo.com"], ["password_digest", "$2a$12$HneY6KsAYqiNt0kRnmZfue4MQS3qBCY0NLFzr3WkYnO2lAl0VgxR6"], ["session_token", "3iXMJ2W5NlZDzHAVZxjP3Q"], ["created_at", "2019-07-29 20:40:17.732317"], ["updated_at", "2019-07-29 20:40:17.732317"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kwoolward2@cnbc.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Kari"], ["last_name", "Woolward"], ["email", "kwoolward2@cnbc.com"], ["password_digest", "$2a$12$nzsY7bQO1oIWaVSp7gpPEeedMY5tQyHVNmKCTqIUtJeM82kILOLSO"], ["session_token", "tOwXYX_Gc-G79WZMSnkUgQ"], ["created_at", "2019-07-29 20:40:17.979565"], ["updated_at", "2019-07-29 20:40:17.979565"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dchezier3@icq.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Drusie"], ["last_name", "Chezier"], ["email", "dchezier3@icq.com"], ["password_digest", "$2a$12$75Odlx3HBclS/6DH4zrDHOFMVzNBqlO8/f/SMW.B0RT8VwkpOiOty"], ["session_token", "jLPH3fOS3Vb4ICN2QNX9WA"], ["created_at", "2019-07-29 20:40:18.225702"], ["updated_at", "2019-07-29 20:40:18.225702"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sfreen4@ask.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Shirley"], ["last_name", "Freen"], ["email", "sfreen4@ask.com"], ["password_digest", "$2a$12$O4b6oHSArvO/.xbCARYbS.q2LVwz4vcn5fvL7JaLhWz7x.WI.CEh2"], ["session_token", "RcDhdasldjyBmqroAkiR1A"], ["created_at", "2019-07-29 20:40:18.486327"], ["updated_at", "2019-07-29 20:40:18.486327"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ssheard5@sourceforge.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Susana"], ["last_name", "Sheard"], ["email", "ssheard5@sourceforge.net"], ["password_digest", "$2a$12$OJQhsQdGh.d/Lab/C0ihau4Gs3UmrANd/5Rw6dnv3LTkfmSjCze6G"], ["session_token", "qzwWbSgU5AXIRJNjSKPTPw"], ["created_at", "2019-07-29 20:40:18.740018"], ["updated_at", "2019-07-29 20:40:18.740018"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bneubigging6@is.gd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Betteann"], ["last_name", "Neubigging"], ["email", "bneubigging6@is.gd"], ["password_digest", "$2a$12$465zMsDZOMaznFrEoLvw4u/iBVHLzwrK4Re08.HjNee9s4eN5qfty"], ["session_token", "ceLp3V1f7ZiqY4HXqsXkAg"], ["created_at", "2019-07-29 20:40:18.994705"], ["updated_at", "2019-07-29 20:40:18.994705"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pfurmedge7@mayoclinic.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Paige"], ["last_name", "Furmedge"], ["email", "pfurmedge7@mayoclinic.com"], ["password_digest", "$2a$12$g8OhOYtCt/zF2lGzv6YscehFIkYcCtZ4QIqd1p/QMUWxp58TQS7mG"], ["session_token", "XwEIQpwg2p8-c7LZY8bYRQ"], ["created_at", "2019-07-29 20:40:19.247883"], ["updated_at", "2019-07-29 20:40:19.247883"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mshallcroff8@house.gov"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Moses"], ["last_name", "Shallcroff"], ["email", "mshallcroff8@house.gov"], ["password_digest", "$2a$12$A8Y746uK6HjyHNHSFcOowuP3wkW9LBsby6PSfEnDbPO881iDwZzLK"], ["session_token", "PEJeI2Xe0iI6lKvowQhuVg"], ["created_at", "2019-07-29 20:40:19.496347"], ["updated_at", "2019-07-29 20:40:19.496347"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bpedri9@utexas.edu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bucky"], ["last_name", "Pedri"], ["email", "bpedri9@utexas.edu"], ["password_digest", "$2a$12$Hcwt8oKigEtO64NbPevrleHUuiV4/9AW7jI7fIVmLdwRPEgvu7z4y"], ["session_token", "ieTKGko1f1HDWZKYDqQTLg"], ["created_at", "2019-07-29 20:40:19.742181"], ["updated_at", "2019-07-29 20:40:19.742181"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mflemmicha@salon.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Mata"], ["last_name", "Flemmich"], ["email", "mflemmicha@salon.com"], ["password_digest", "$2a$12$cdq1bvQBUwLstKvAs2/wPuRg6BQU3RE2NyE.nBlOusr1/kLIIksFu"], ["session_token", "66BAxtL9QsYOahFl1FuJeA"], ["created_at", "2019-07-29 20:40:19.989872"], ["updated_at", "2019-07-29 20:40:19.989872"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "izannellib@github.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Inglis"], ["last_name", "Zannelli"], ["email", "izannellib@github.com"], ["password_digest", "$2a$12$P8zwVy2WuVMC4hS.r3qA0OeqKkbeRAMIZ6ZgjWksap.sA3IO.CNc2"], ["session_token", "SClGMaGDnvKn1UOXLbMeOg"], ["created_at", "2019-07-29 20:40:20.241566"], ["updated_at", "2019-07-29 20:40:20.241566"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "glylec@ning.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Gnni"], ["last_name", "Lyle"], ["email", "glylec@ning.com"], ["password_digest", "$2a$12$qits7gSCxHE7cFgh8WHKgu9Qgwe6gdB2dwRHD5Rb5M3LGZaff0I2i"], ["session_token", "V6Jlr-wlYBkZD0foRUIH0w"], ["created_at", "2019-07-29 20:40:20.487761"], ["updated_at", "2019-07-29 20:40:20.487761"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ceyed@patch.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Claudine"], ["last_name", "Eye"], ["email", "ceyed@patch.com"], ["password_digest", "$2a$12$Jx/7gynzZVCF4aB0tOLmh.bwotlJ9A4qSoV4B49goer97DSkjSi4W"], ["session_token", "W476ft8vZcU1h2b_7Z-ZOQ"], ["created_at", "2019-07-29 20:40:20.741558"], ["updated_at", "2019-07-29 20:40:20.741558"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ngarcie@naver.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Nydia"], ["last_name", "Garci"], ["email", "ngarcie@naver.com"], ["password_digest", "$2a$12$A0yfmOCg0AISi0RXC.3.Ee7P3gvajnvzlEFTXuBFOJOpTrl7OD.vS"], ["session_token", "1D1D7s9Ff7T_FAlY_n3Ucg"], ["created_at", "2019-07-29 20:40:20.985693"], ["updated_at", "2019-07-29 20:40:20.985693"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2019-07-29 13:42:10 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vrez/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+NameError - Couldn't find Api::SessionsHelper, expected it to be defined in helpers/api/sessions_helper.rb:
+  app/controllers/application_controller.rb:1:in `<main>'
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/ca9f1f23f729cf9e/variables" for ::1 at 2019-07-29 13:42:11 -0700
+Started POST "/__better_errors/ca9f1f23f729cf9e/variables" for ::1 at 2019-07-29 13:42:26 -0700
+Started GET "/" for ::1 at 2019-07-29 13:43:13 -0700
+
+NameError - Couldn't find Api::SessionsHelper, expected it to be defined in helpers/api/sessions_helper.rb:
+  app/controllers/application_controller.rb:1:in `<main>'
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/717a3af0959e06b5/variables" for ::1 at 2019-07-29 13:43:13 -0700
+Started POST "/__better_errors/717a3af0959e06b5/variables" for ::1 at 2019-07-29 13:43:16 -0700
+Started GET "/" for ::1 at 2019-07-29 13:44:46 -0700
+
+NameError - Couldn't find Api::SessionsHelper, expected it to be defined in helpers/api/sessions_helper.rb:
+  app/controllers/application_controller.rb:1:in `<main>'
+  app/controllers/static_pages_controller.rb:1:in `<main>'
+
+Started POST "/__better_errors/40eb1d854da6be96/variables" for ::1 at 2019-07-29 13:44:46 -0700
+Started GET "/" for ::1 at 2019-07-29 13:45:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 3159ms (Views: 3158.6ms | ActiveRecord: 0.0ms)
+
+
