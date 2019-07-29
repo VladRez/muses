@@ -1,1 +1,7 @@
-<div id="root">Rails root page</div>
+<% if logged_in? %> 
+    <script id='bootstrap-current-user'>
+        window.currentUser = <%= current_user.to_json(:only=>[:id, :first_name, :last_name, :email]).html_safe %>
+    </script>
+<% end %>
+
+<div id="root">In Rails Root</div>
