@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
                         </div>
                     </div>
 
-                    <div className="homePageSignUpContainer">
+                    <div className="baseSignUpContainer">
                         <div className="projectLogo"></div>
                         <h2 className="tagline">Where questions are asked, answered, and edited by users.</h2>
 
@@ -85,6 +85,9 @@ class SessionForm extends React.Component {
                                         </form>
                                     </div>
 
+
+
+
                                     <div className="login">
 
                                         <div className="inlineLogin">
@@ -101,7 +104,6 @@ class SessionForm extends React.Component {
                                                         <div className="formColumn">
                                                             <input className="submitButton" type="submit" value="Login" />
                                                         </div>
-                                                        
                                                     </div>
                                                 </form>
                                             </div>

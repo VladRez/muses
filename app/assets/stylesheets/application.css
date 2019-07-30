@@ -14,6 +14,98 @@
  *= require_self
  */
 
+body {
+    text-align: left;
+    direction: ltr;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+    color: #333;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+div {
+    display: block;
+}
+
+body {
+    height: 100%;
+    color: #333;
+    font-size: 13px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=number] {
+    padding: 3px 5px;
+    height: 15px;
+    width: 150px;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=password], textarea, .fake_editor, .qtext_editor_content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 27px;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(200, 200, 200, 0.3);
+    -webkit-transition: border-color .2s;
+    transition: border-color .2s;
+    -webkit-transition: border-color .2s 180ms ease-in-out 0s;
+    -o-transition: border-color .2s 180ms ease-in-out 0s;
+    transition: border-color .2s 180ms ease-in-out 0s;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+button, input, optgroup, select, textarea {
+    color: #333;
+}
+
 .loggedOutPage .contentWrapper {
     padding: 0;
     margin: 0;
@@ -47,7 +139,7 @@
     z-index: -1;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer {
+.loggedOutPage .contentWrapper .baseSignUpContainer {
     background: #fff;
     border: 1px solid #e2e2e2;
     box-shadow: 0 0 5px #888;
@@ -63,11 +155,11 @@
     top: 10%
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .projectLogo {
+.loggedOutPage .contentWrapper .baseSignUpContainer .projectLogo {
     margin: auto;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .tagline {
+.loggedOutPage .contentWrapper .baseSignUpContainer .tagline {
     font-size: 19px;
     font-weight: 400;
     font-family: Georgia, Times, "Times New Roman", "Hiragino Kaku Gothic Pro", "Meiryo", serif;
@@ -76,7 +168,7 @@
     text-align: center;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer{
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer{
     margin-top: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -84,33 +176,29 @@
     position: relative;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .innerContentFormContainer{
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .innerContentFormContainer{
     padding: 32px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin {
     position: relative;
     *zoom: 1;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:after, 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:before {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:after, 
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:before {
     display: table;
     content: "";
     zoom: 1;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:after {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:after {
     clear: both;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .title {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup,
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup,
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -118,11 +206,11 @@
     width: 50%
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup {
     padding-right: 32px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup:after {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup:after {
     content: "";
     width: 1px;
     position: absolute;
@@ -132,15 +220,15 @@
     left: 50%
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .signup, .stackedForm {
+.loggedOutPage .contentWrapper .baseSignUpContainer .signup, .stackedForm {
     margin-top: 8px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .signup .stackedForm label{
+.loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm label{
     line-height: 27px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .signup .stackedForm .text {
+.loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm .text {
     float: right;
 }
 
@@ -250,12 +338,12 @@
 
 
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
     position: relative;
     padding-left: 32px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin .headerLoginTextBox {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin .headerLoginTextBox {
     width: 100%;
     font-size: 15px;
     line-height: 1.4;
@@ -265,33 +353,33 @@
     margin-bottom: 8px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=password],
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=text]{
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=password],
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=text]{
     background-color: #EEE;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=text]{
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=text]{
     margin-top: 16px;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin .submitButton{
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin .submitButton{
     float: right;
     font-size: 15px;
     line-height: 1.4;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin {
     *zoom: 1;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:before,
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:after {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:before,
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:after {
     display: table;
     content: "";
     zoom: 1;
 }
 
-.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:after {
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:after {
     clear: both;
 }
 
