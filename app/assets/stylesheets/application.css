@@ -13,3 +13,313 @@
  *= require_tree .
  *= require_self
  */
+
+.loggedOutPage .contentWrapper {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+
+
+.loggedOutPage .contentWrapper .bgContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+.loggedOutPage .contentWrapper .bgImage {
+    background: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9r5j.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.loggedOutPage .bgContainer{
+    z-index: -1;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 0 5px #888;
+    border-radius: 4px;
+    padding-top: 25px;
+    width: 650px;
+    position: absolute;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: hidden;
+    top: 10%
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .projectLogo {
+    margin: auto;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .tagline {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: Georgia, Times, "Times New Roman", "Hiragino Kaku Gothic Pro", "Meiryo", serif;
+    margin: 8px 0 32px;
+    color: #949494;
+    text-align: center;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer{
+    margin-top: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .innerContentFormContainer{
+    padding: 32px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin {
+    position: relative;
+    *zoom: 1;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:after, 
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:before {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signUpLogin:after {
+    clear: both;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .title {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup,
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup {
+    padding-right: 32px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .signup:after {
+    content: "";
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    left: 50%
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .signup, .stackedForm {
+    margin-top: 8px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .signup .stackedForm label{
+    line-height: 27px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .signup .stackedForm .text {
+    float: right;
+}
+
+.firstLastNameGroup {
+    display: inline-block;
+ 
+}
+
+.firstLastNameGroup:before, .firstLastNameGroup:after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.firstLastNameGroup:after {
+    clear: both;
+}
+
+.firstLastNameGroup:after {
+    clear: both;
+}
+
+.formRow{
+    *zoom: 1;
+    padding: 0 0 8px;
+}
+
+.formRow:before, .formRow:after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.firstLastNameGroup .formRow .half {
+    width: 49%;
+    float: left;
+}
+
+.firstLastNameGroup .formRow .half .lastName{
+   
+}
+
+.emailSignupForm .firstLastNameGroup .formRow:last-child {
+    padding-left: 4px;
+}
+
+.emailSignupForm .formRow label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: bold;
+}
+
+.emailSignupForm .formRow input {
+    display: block;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.submitButton {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: opacity ease-in-out 100ms, color ease-in-out 100ms, background-color ease-in-out 100ms, border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.2);
+    display: inline-block;
+    font-weight: 500;
+    outline: 0;
+    padding: 3px 7px 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #3e78ad;
+    color: #fff;
+    border: 1px solid #3a66ad;
+    box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.6);
+}
+
+.submitButton:active{
+    opacity: .6;
+    box-shadow: none;
+}
+
+.submitButton:hover {
+    text-decoration: none;
+}
+
+
+
+.formButtons a,
+.formButtons input[type='submit'],
+.formButtons .submitButton {
+    line-height: 27px;
+    margin-left: 8px;
+}
+
+.formButtons .submitButton {
+    line-height: 1.4em!important;
+}
+
+
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login {
+    position: relative;
+    padding-left: 32px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin .headerLoginTextBox {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.4;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: 32px;
+    margin-bottom: 8px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=password],
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=text]{
+    background-color: #EEE;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin input[type=text]{
+    margin-top: 16px;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .regularLogin .submitButton{
+    float: right;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin {
+    *zoom: 1;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:before,
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.loggedOutPage .contentWrapper .homePageSignUpContainer .formContainer .login .inLineLogin:after {
+    clear: both;
+}
+
+
+
+.formColumn {
+    *zoom: 1;
+}
+
+.formColumn:before,
+.formColumn:after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.formColumn:after {
+    clear: both;
+}
+
+.projectLogo {
+    width: 224px;
+    min-width: 224px;
+    height: 140px;
+    background-size: 224px 63px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 82px;
+    position: relative;
+}
