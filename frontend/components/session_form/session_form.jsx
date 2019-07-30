@@ -48,13 +48,13 @@ class SessionForm extends React.Component {
                                                         <div className="formRow half">
                                                             <label>First Name</label>
                                                             <div className="inputWrapper">
-                                                                <input className="text" type="text" />
+                                                                <input className="text" type="text" tabindex="9"/>
                                                             </div>
                                                         </div>
                                                         <div className="formRow half lastName">
                                                             <label>Last Name</label>
                                                             <div className="inputWrapper">
-                                                                <input className="text" type="text" />
+                                                                <input className="text" type="text" tabindex="9"/>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
 
                                             <div className="row">
                                                 <div className="formButtons">
-                                                    <span className="light">
+                                                    <span >
                                                         <input className="submitButton" type="submit" value="Sign Up" />
                                                     </span>
                                                 </div>

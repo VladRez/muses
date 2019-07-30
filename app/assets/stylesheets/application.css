@@ -229,15 +229,16 @@ button, input, optgroup, select, textarea {
 }
 
 .loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm .text {
-    float: right;
+    /* Changed to space out form inputs */
+    /* float: right; */
 }
 
 .firstLastNameGroup {
-    display: inline-block;
- 
+    *zoom: 1;
 }
 
-.firstLastNameGroup:before, .firstLastNameGroup:after {
+.firstLastNameGroup:before, 
+.firstLastNameGroup:after {
     display: table;
     content: "";
     zoom: 1;
@@ -247,8 +248,13 @@ button, input, optgroup, select, textarea {
     clear: both;
 }
 
-.firstLastNameGroup:after {
-    clear: both;
+.firstLastNameGroup .formRow .half {
+    width: 49%;
+    float: left;
+}
+
+.emailSignupForm .firstLastNameGroup .formRow:last-child {
+    /* padding-left: 4px; */
 }
 
 .formRow{
@@ -262,18 +268,13 @@ button, input, optgroup, select, textarea {
     zoom: 1;
 }
 
-.firstLastNameGroup .formRow .half {
-    width: 49%;
-    float: left;
-}
+
 
 .firstLastNameGroup .formRow .half .lastName{
    
 }
 
-.emailSignupForm .firstLastNameGroup .formRow:last-child {
-    padding-left: 4px;
-}
+
 
 .emailSignupForm .formRow label {
     font-size: 11px;
@@ -323,7 +324,11 @@ button, input, optgroup, select, textarea {
     text-decoration: none;
 }
 
-
+.formButtons {
+    margin-top: 16px;
+    text-align: right;
+    font-size: 13px;
+}
 
 .formButtons a,
 .formButtons input[type='submit'],
