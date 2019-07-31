@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
 
         return (
             <div className="loggedOutPage">
-                {console.log(JSON.stringify(this.state))}
+
                 <div className="contentWrapper">
                     <div className="bgContainer">
                         <div className="bgImage">
