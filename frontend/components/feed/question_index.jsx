@@ -1,4 +1,6 @@
 import React from 'react'
+import QuestionIndexItem from './question_index_item'
+import CreateQuestionFormContainer from './create_question_form_container'
 
 class QuestionIndex extends React.Component {
     componentDidMount() {
@@ -7,12 +9,15 @@ class QuestionIndex extends React.Component {
 
     render() {
         const questions = this.props.questions.map((question, idx)=>{
-            return <li key={idx}>{JSON.stringify(question)}</li>
+            return <QuestionIndexItem key={idx} question={question}/>
         })
+        
         return (<div>
+            <CreateQuestionFormContainer />
             <ul>
             {questions}
             </ul>
+            
         </div>)
     }
 }
