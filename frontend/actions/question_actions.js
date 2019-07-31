@@ -7,7 +7,7 @@ export const RECEIVE_QUESTION_ERRORS = 'RECEIVE_QUESTION_ERRORS'
 
 export const receiveAllQuestions = (questions) =>({
     type: RECEIVE_ALL_QUESTIONS,
-    questions
+    questions: questions
 })
 
 export const receiveQuestion = (question) =>({
@@ -21,21 +21,15 @@ export const receiveQuestionErrors = (errors) =>({
 })
 
 export const fetchQuestions = () => (dispatch) =>(
-    APIUtil
-    .fetchQuestions()
-    .then(questions=>(dispatch(fetchQuestions(questions))),
+    APIUtil.fetchQuestions().then(questions=>(dispatch(receiveAllQuestions(questions))),
          err=>(receiveQuestionErrors(err)))
 );
 
 export const fetchQuestion = (id) => (dispatch) =>(
-    APIUtil
-    .fetchQuestion(id)
-    .then(question=>(dispatch(receiveQuestion(question))),
+    APIUtil.fetchQuestion(id).then(question=>(dispatch(receiveQuestion(question))),
         err=>(receiveQuestionErrors(err)))
 )
 
 export const createQuestion = (question) => (dispatch =>(
-    APIUtil
-    .createQuestion(data).then(question=>(dispatch(receiveQuestion(question)),
-    err=>(receiveQuestionErrors(err))))
+    APIUtil.createQuestion(data).then(question=>(dispatch(receiveQuestion(question)), err=>(receiveQuestionErrors(err))))
 ))

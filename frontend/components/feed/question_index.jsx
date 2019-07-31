@@ -2,7 +2,7 @@ import React from 'react'
 
 class QuestionIndex extends React.Component {
     componentDidMount() {
-       
+   this.props.fetchQuestions()
     }
 
     render() {
@@ -11,7 +11,7 @@ class QuestionIndex extends React.Component {
         })
         return (<div>
             <ul>
-                {questions}
+            {questions}
             </ul>
         </div>)
     }

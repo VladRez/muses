@@ -9,8 +9,7 @@ const questionReducer = (state = _nullQuestions, action) => {
     Object.freeze(state)
     switch(action.type){
         case RECEIVE_ALL_QUESTIONS:
-            
-            return Object.assign({},state, actions.questions)
+            return Object.assign({},state, action.questions)
         case RECEIVE_QUESTION:
             let qst = action.question
             return Object.assign({},state, {[qst.id]: qst})
