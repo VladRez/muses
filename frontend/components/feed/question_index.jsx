@@ -6,9 +6,13 @@ class QuestionIndex extends React.Component {
     }
 
     render() {
-
+        const questions = this.props.questions.map((question, idx)=>{
+            return <li key={idx}>{JSON.stringify(question)}</li>
+        })
         return (<div>
-
+            <ul>
+                {questions}
+            </ul>
         </div>)
     }
 }

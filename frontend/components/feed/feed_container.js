@@ -5,14 +5,14 @@ import Feed from './feed'
 const mapStateToProps = (state, ownProps) => {
     
     return { 
-       
+     
     }
 }
 
 const mapDispatchToProps = (disptach) => {
 
     return {
-        fetchQuestions: () => dispatch(receiveAllQuestions())
+      
     }
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import QuestionIndex from './question_index'
+import QuestionIndexContainer from './question_index_container'
 const Feed = (props) => {
     return (<div>
-       <QuestionIndex props={props} />
+       <QuestionIndexContainer/>
     </div>)
 }
 
