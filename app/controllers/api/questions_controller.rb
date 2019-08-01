@@ -6,11 +6,12 @@ class Api::QuestionsController < ApplicationController
     end
 
     def create
+        byebug
         @question = Question.new(question_params)
         if @question.save
             render :show
         else
-            render json: [@question.errors.full_messanges], status: 401
+            render json: @question.errors.full_messages, status: 401
         end
     end
 

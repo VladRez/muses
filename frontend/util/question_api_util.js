@@ -12,10 +12,10 @@ export const fetchQuestions = () => (
     })
   );
   
-  export const createQuestion = (data) => (
+  export const createQuestion = (question) => (
     $.ajax({
       method: 'POST',
       url: '/api/questions',
-      data: data
+      data: {question: question}
     })
   );

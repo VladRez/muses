@@ -22,14 +22,15 @@ export const receiveQuestionErrors = (errors) =>({
 
 export const fetchQuestions = () => (dispatch) =>(
     APIUtil.fetchQuestions().then(questions=>(dispatch(receiveAllQuestions(questions))),
-         err=>(receiveQuestionErrors(err)))
+         err=>(dispatch(receiveQuestionErrors(err))))
 );
 
 export const fetchQuestion = (id) => (dispatch) =>(
     APIUtil.fetchQuestion(id).then(question=>(dispatch(receiveQuestion(question))),
-        err=>(receiveQuestionErrors(err)))
+        err=>(dispatch(receiveQuestionErrors(err))))
 )
 
 export const createQuestion = (question) => (dispatch =>(
-    APIUtil.createQuestion(data).then(question=>(dispatch(receiveQuestion(question)), err=>(receiveQuestionErrors(err))))
+    APIUtil.createQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
+    err=>(dispatch(receiveQuestionErrors(err)))))
 ))
