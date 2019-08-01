@@ -6,7 +6,7 @@ class Api::QuestionsController < ApplicationController
     end
 
     def create
-        byebug
+        
         @question = Question.new(question_params)
         if @question.save
             render :show
