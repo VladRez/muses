@@ -19,10 +19,15 @@ class Api::AnswersController < ApplicationController
     end
 
     def show
-        #todo write this
-        # question_id = params[:question_id]
-        # question = Question.find_by(id: question_id)
-        # @answer = question.answers.find_by(id: params[:id])
+        question = Question.find_by(id: params[:question_id])
+        
+        if question.answers.find_by(id: params[:id])
+            @answer = question.answers.find_by(id: params[:id])
+            render :show
+        else
+            render json: ['bad question or answer id']
+        end
+            
     end
 
     def destroy
@@ -32,7 +37,8 @@ class Api::AnswersController < ApplicationController
     private
 
     def answer_params
-        params.permit(:answer).require(:answer_body, :question_author_id)
+        
+        params.require(:answer).permit(:answer_body, :answer_author_id)
     end
 
 

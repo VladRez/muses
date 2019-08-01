@@ -10,9 +10,9 @@ export const receiveAllQuestions = (questions) =>({
     questions: questions
 })
 
-export const receiveQuestion = (question) =>({
+export const receiveQuestion = (payload) =>({
     type: RECEIVE_QUESTION,
-    question
+    payload
 })
 
 export const receiveQuestionErrors = (errors) =>({

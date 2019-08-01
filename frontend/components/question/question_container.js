@@ -2,13 +2,16 @@ import {connect} from 'react-redux';
 import {fetchQuestion} from '../../actions/question_actions'
 import Question from './question'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {    
+    let qId = ownProps.match.params.question_id
+    const question = state.entities.questions[qId]
     
-    const id = ownProps.match.params.question_id
-    const question = state.entities.questions[id];
+    const answers = Object.values(state.entities.answers)
+
     
     return {
-        question
+        question,
+        answers
     }
 }
 

@@ -17,6 +17,7 @@ class Api::QuestionsController < ApplicationController
 
     def show
         @question = Question.find_by(id: params[:id])
+        @answers = @question.answers
     end
 
     def destroy

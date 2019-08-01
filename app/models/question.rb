@@ -10,3 +10,4 @@ class Question < ApplicationRecord
         class_name: 'Answer'
 
 end
+
