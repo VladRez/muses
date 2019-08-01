@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AnswerIndexContainer from './answer_index_container';
+import AnswerIndexContainer from '../answers/answer_index_container';
 import { withRouter } from "react-router";
 
 class Question extends React.Component{
