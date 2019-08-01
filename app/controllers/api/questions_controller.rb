@@ -9,6 +9,7 @@ class Api::QuestionsController < ApplicationController
         
         @question = Question.new(question_params)
         if @question.save
+            @answers = @question.answers
             render :show
         else
             render json: @question.errors.full_messages, status: 401

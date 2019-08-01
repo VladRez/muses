@@ -17,6 +17,7 @@ class CreateQuestionForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         this.props.action(this.state)
+        this.setState(this.props.question)
     }
     render () {
         return (<div>

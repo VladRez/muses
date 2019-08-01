@@ -2,9 +2,10 @@ class Api::AnswersController < ApplicationController
 
     def index
         question_id = params[:question_id]
-        question = Question.find_by(id: question_id)
-        @answers = question.answers
-        render :index
+        @question = Question.find_by(id: question_id)
+        @answers = @question.answers
+        # render :index
+        render 'api/questions/show'
     end
 
     def create
@@ -12,7 +13,10 @@ class Api::AnswersController < ApplicationController
         @answer[:question_id] = params[:question_id]
         
         if @answer.save
-            render :show
+            @question = Question.find_by(id: params[:question_id])
+            @answers = @question.answers
+            render 'api/questions/show'
+           
         else
             render json: @answer.errors.full_messages, status: 401
         end

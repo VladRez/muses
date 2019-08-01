@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AnswerIndexContainer from './answer_index_container';
+import { withRouter } from "react-router";
 
 class Question extends React.Component{
 
@@ -26,4 +27,4 @@ class Question extends React.Component{
 }
     
 
-export default Question;
+export default withRouter(Question);

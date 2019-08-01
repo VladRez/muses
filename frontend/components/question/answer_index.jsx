@@ -1,6 +1,6 @@
 import React from 'react'
 import AnswerIndexItemContainer from './answer_index_item_container'
-
+import AnswerFormContainer from './answer_form_container'
 
 class AnswerIndex extends React.Component {
 
@@ -12,7 +12,11 @@ class AnswerIndex extends React.Component {
             return <AnswerIndexItemContainer key={answer.id} answer={answer} />
         })
 
-        return (<div>{answers}</div>)
+        return (<div>
+            <AnswerFormContainer/>
+            <hr/>
+            {answers}
+            </div>)
     }
 }
 
