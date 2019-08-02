@@ -22,7 +22,7 @@ class CreateQuestionForm extends React.Component {
     }
     render () {
         return (<div>
-           <form onSubmit={this.handleSubmit} className='card'>
+           <form onSubmit={this.handleSubmit} className='askQuestionButton'>
                 <input 
                 type="text" 
                 placeholder="What is your question or link?"

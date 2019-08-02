@@ -15,3 +15,14 @@
 //= require jquery_ujs
 //= require activestorage
 //= require_tree .
+
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    
+    document.getElementById("demoButton").addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('emailInput').value = 'wbradbrook1@squidoo.com'
+        document.getElementById('passwordInput').value = '02OKuZg7G'
+        
+    });
+});

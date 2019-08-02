@@ -4,20 +4,24 @@ import CreateQuestionFormContainer from './create_question_form_container'
 
 class QuestionIndex extends React.Component {
     componentDidMount() {
-   this.props.fetchQuestions()
+        this.props.fetchQuestions()
     }
 
     render() {
-        const questions = this.props.questions.map((question, idx)=>{
-            return <QuestionIndexItem key={idx} question={question}/>
+        const questions = this.props.questions.map((question, idx) => {
+            return <QuestionIndexItem key={idx} question={question} />
         })
-        
+
         return (<div>
-            <CreateQuestionFormContainer />
+            <div className="addQuestionPrompt">
+                <div className="userAsksHeader">
+                    <CreateQuestionFormContainer />
+                </div>
+            </div>
             <ul>
-            {questions}
+                {questions}
             </ul>
-            
+
         </div>)
     }
 }
