@@ -10,6 +10,9 @@ const mapStateToProps = (state) => {
         default_user: { 
             signup: {first_name: '', last_name: '', email: '', password: ''},
             login: {email: '', password:''}
+        },
+        demo_user: {
+            login: {email: 'ajakubczyk0@tiny.cc', password:'OgUq8GUitk'}
         }
     }
 }

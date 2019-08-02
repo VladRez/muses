@@ -6,7 +6,6 @@ class SessionForm extends React.Component {
         super(props);
 
         this.state = this.props.default_user
-
         this.handleLogin = this.handleLogin.bind(this)
         this.handleSignup = this.handleSignup.bind(this)
     }
@@ -27,6 +26,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         this.props.signup(this.state);
     }
+
 
 
     render() {
@@ -123,8 +123,8 @@ class SessionForm extends React.Component {
                                                 </div>
                                                 <div className="formColumn">
                                                     <input className="submitButton" id="loginButton" type="submit" value="Login" />
-                
-                                                    <button id="demoButton" className="submitButton demoButton">Demo</button>
+                                                    <input type="hidden" name="email" value='ajakubczyk0@tiny.cc'/>
+                                                    <button id="demoButton" onClick={()=>{this.state=this.props.demo_user}} className="submitButton demoButton">Demo</button>
                                                 </div>
                                             </div>
                                         </form>
