@@ -18,10 +18,7 @@ class QuestionIndex extends React.Component {
                     <CreateQuestionFormContainer />
                 </div>
             </div>
-            <ul>
                 {questions}
-            </ul>
-
         </div>)
     }
 }
