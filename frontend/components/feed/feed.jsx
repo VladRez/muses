@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom'
 
 const Feed = (props) => {
     return (<div className="feed">
-        <div className="contentWRapper">
+        <div className="contentWrapper">
             <div className="gridPage">
                 <div className="layout3ColCenter">
                     <QuestionIndexContainer />
