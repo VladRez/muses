@@ -14,31 +14,7 @@
  *= require_self
  */
 
-body {
-    text-align: left;
-    direction: ltr;
-}
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
-
-button, input, optgroup, select, textarea {
-    color: #333;
-}
-
-button, input, optgroup, select, textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0;
-}
-
-div {
-    display: block;
-}
-
-body {
+ body {
     height: 100%;
     color: #333;
     font-size: 13px;
@@ -55,13 +31,7 @@ html {
     line-height: 1.4;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=number] {
-    padding: 3px 5px;
-    height: 15px;
-    width: 150px;
-}
-
-input[type=text], input[type=email], input[type=number], input[type=password], textarea, .fake_editor, .qtext_editor_content {
+input[type=text], input[type=email], input[type=number], input[type=password], textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -76,30 +46,6 @@ input[type=text], input[type=email], input[type=number], input[type=password], t
     -webkit-transition: border-color .2s 180ms ease-in-out 0s;
     -o-transition: border-color .2s 180ms ease-in-out 0s;
     transition: border-color .2s 180ms ease-in-out 0s;
-}
-
-input {
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    -webkit-appearance: textfield;
-    background-color: white;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 0px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
 }
 
 button, input, optgroup, select, textarea {
@@ -172,26 +118,17 @@ Session Form
     text-align: center;
 }
 
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer{
-    margin-top: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-}
 
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .innerContentFormContainer{
-    padding: 32px;
-}
 
+/* prevent line from going to the bottom */
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin {
+    padding: 32px;
     position: relative;
-    *zoom: 1;
 }
 
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:after, 
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:before {
-    display: table;
+    display: flex;
     content: "";
     zoom: 1;
 }
@@ -204,8 +141,6 @@ Session Form
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup,
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
     float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%
 }
@@ -219,7 +154,7 @@ Session Form
     width: 1px;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 30px;
     background-color: #e6e6e6;
     left: 50%;
 }
@@ -232,66 +167,27 @@ Session Form
     line-height: 27px;
 }
 
-.loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm .text {
-    /* Changed to space out form inputs */
-    float: right;
-}
-
-.firstLastNameGroup {
-    *zoom: 1;
-}
-
-.firstLastNameGroup:before, 
-.firstLastNameGroup:after {
-    display: table;
-    content: "";
-    zoom: 1;
-}
-
-.firstLastNameGroup:after {
-    clear: both;
-}
-
-.firstLastNameGroup .formRow .half {
+.firstLastNameGroup .half {
     width: 49%;
     float: left;
 }
 
-.emailSignupForm .firstLastNameGroup .formRow:last-child {
-    /* padding-left: 4px; */
+.firstLastNameGroup .formRow:last-child {
+    padding-left: 4px;
 }
 
-.formRow{
-    *zoom: 1;
-    padding: 0 0 8px;
+.formRow input {
+    display: block;
+    width: 100%;
+    background-color: #fafafa;
 }
 
-.formRow:before, .formRow:after {
-    display: table;
-    content: "";
-    zoom: 1;
-}
-
-
-
-.firstLastNameGroup .formRow .half .lastName{
-   
-}
-
-
-
-.emailSignupForm .formRow label {
+.formRow label {
     font-size: 11px;
     color: #666;
     text-transform: uppercase;
     letter-spacing: .5px;
     font-weight: bold;
-}
-
-.emailSignupForm .formRow input {
-    display: block;
-    width: 100%;
-    background-color: #fafafa;
 }
 
 .submitButton {
@@ -334,18 +230,13 @@ Session Form
     font-size: 13px;
 }
 
-.formButtons a,
-.formButtons input[type='submit'],
-.formButtons .submitButton {
-    line-height: 27px;
-    margin-left: 8px;
-}
-
 .formButtons .submitButton {
     line-height: 1.4em!important;
 }
 
-
+.submitButton .demoButton {
+    margin-right: 2px;
+}
 
 .loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
     position: relative;
@@ -367,46 +258,15 @@ Session Form
     background-color: #EEE;
 }
 
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=text]{
-    margin-top: 16px;
+.formInputs {
+    padding-top: 10px;
 }
 
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin .submitButton{
+
+.formColumn .submitButton {
     float: right;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin {
-    *zoom: 1;
-}
-
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:before,
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:after {
-    display: table;
-    content: "";
-    zoom: 1;
-}
-
-.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .inLineLogin:after {
-    clear: both;
-}
-
-
-
-.formColumn {
-    *zoom: 1;
-}
-
-.formColumn:before,
-.formColumn:after {
-    display: table;
-    content: "";
-    zoom: 1;
-}
-
-.formColumn:after {
-    clear: both;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .projectLogo {
