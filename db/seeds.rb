@@ -42,10 +42,11 @@ dummy_questions = [
 {question: 'Is there one secret about luxury cars that people should know?', question_author_id: User.all[6].id}
 ]
 dummy_questions.each {|question| Question.create(question)}
+
 dummy_answers = [
     {answer_body: 'Don’t use dialogue tags. Seriously, try writing a fictional story with 2 or more characters and zero dialogue tags.', 
         question_id: Question.all.first.id, answer_author_id: User.all.last.id},
-        {answer_body: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution ', 
+        {answer_body: 'A fellow author told me this trick, and it improved my writing more than any other single piece of advice. When you stop using dialogue tags, not only does it read smoother, but suddenly you have to do two things with every bit of dialogue ', 
             question_id: Question.all.first.id, answer_author_id: User.all.last.id}
 ]
 
