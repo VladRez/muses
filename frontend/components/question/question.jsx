@@ -20,7 +20,7 @@ class Question extends React.Component{
         
         return (<div>
             <Link to='/'>All Questions</Link>
-            <h1>{question}</h1>
+            <div className="card"><h3>{question}</h3></div>
          <AnswerIndexContainer answers={answers}/>
         </div>)
     }

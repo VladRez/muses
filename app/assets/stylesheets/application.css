@@ -106,6 +106,10 @@ button, input, optgroup, select, textarea {
     color: #333;
 }
 
+/*
+Session Form
+*/
+
 .loggedOutPage .contentWrapper {
     padding: 0;
     margin: 0;
@@ -217,7 +221,7 @@ button, input, optgroup, select, textarea {
     top: 0;
     bottom: 0;
     background-color: #e6e6e6;
-    left: 50%
+    left: 50%;
 }
 
 .loggedOutPage .contentWrapper .baseSignUpContainer .signup, .stackedForm {
@@ -230,7 +234,7 @@ button, input, optgroup, select, textarea {
 
 .loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm .text {
     /* Changed to space out form inputs */
-    /* float: right; */
+    float: right;
 }
 
 .firstLastNameGroup {
@@ -410,9 +414,50 @@ button, input, optgroup, select, textarea {
     min-width: 224px;
     height: 140px;
     background-size: 224px 63px;
-    background-image: url();
+    background-image: url(https://raw.githubusercontent.com/VladRez/muses/master/app/assets/images/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
     height: 82px;
     position: relative;
+}
+
+
+/*
+QUESTION FEED
+*/
+
+.feed {
+    background: #fafafa;
+    width: 1002px;
+    margin: 0 auto;
+    padding-top: 83px;
+    *zoom: 1;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    
+}
+
+.feed::before,
+.feed::after {
+    display: table;
+    content: "";
+    zoom: 1
+}
+
+.card {
+    background: #fff;
+    margin: 25px auto;
+    width: 450px;
+    padding: 15px;
+    height: auto;
+    text-align: center;
+    /* border-radius */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /* box-shadow */
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
 }

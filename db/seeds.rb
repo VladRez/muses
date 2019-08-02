@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
 
 dummy_users = [
 {first_name: 'Appolonia', last_name: 'Jakubczyk', email: 'ajakubczyk0@tiny.cc', password: 'OgUq8GUitk'},
@@ -30,23 +31,23 @@ dummy_users = [
 dummy_users.each {|user| User.create(user)}
 
 dummy_questions = [
-{question: 'What one tip changed your writing forever?', question_author_id: 1},
-{question: 'How do top students study?', question_author_id: 1},
-{question: 'What is the biggest fear that programmers and data scientists have?', question_author_id: 2},
-{question: 'How do data scientists use statistics?', question_author_id: 3},
-{question: 'Why do economists look at descriptive statistics and plot data before running regressions?', question_author_id: 3},
-{question: 'What is your side hustle and how do you do it?', question_author_id: 4},
-{question: 'What are the things that no one tells you about beginning a startup?', question_author_id: 4},
-{question: 'What are the most interesting facts about human behavior?', question_author_id: 5},
-{question: 'Is there one secret about luxury cars that people should know?', question_author_id: 6}
+{question: 'What one tip changed your writing forever?', question_author_id: User.all[1].id},
+{question: 'How do top students study?', question_author_id: User.all[1].id},
+{question: 'What is the biggest fear that programmers and data scientists have?', question_author_id: User.all[2].id},
+{question: 'How do data scientists use statistics?', question_author_id: User.all[3].id},
+{question: 'Why do economists look at descriptive statistics and plot data before running regressions?', question_author_id: User.all[3].id},
+{question: 'What is your side hustle and how do you do it?', question_author_id: User.all[4].id},
+{question: 'What are the things that no one tells you about beginning a startup?', question_author_id: User.all[4].id},
+{question: 'What are the most interesting facts about human behavior?', question_author_id: User.all[5].id},
+{question: 'Is there one secret about luxury cars that people should know?', question_author_id: User.all[6].id}
 ]
-
-dummy_answers = [
-    {answer_body: 'Nulla facilisi. Cras non velit nec nisi vulputate nonummy.', question_id: 8, answer_author_id: 15},
-    {answer_body: 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.', question_id: 3, answer_author_id: 15},
-    {answer_body: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', question_id: 6, answer_author_id: 9},
-    {answer_body: 'Suspendisse potenti.', question_id: 8, answer_author_id: 6}
-]
-
 dummy_questions.each {|question| Question.create(question)}
+dummy_answers = [
+    {answer_body: 'Don’t use dialogue tags. Seriously, try writing a fictional story with 2 or more characters and zero dialogue tags.', 
+        question_id: Question.all.first.id, answer_author_id: User.all.last.id},
+        {answer_body: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution ', 
+            question_id: Question.all.first.id, answer_author_id: User.all.last.id}
+]
+
+
 dummy_answers.each {|answer| Answer.create(answer)}

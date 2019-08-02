@@ -2,7 +2,10 @@ class Api::QuestionsController < ApplicationController
 
     def index
         @questions = Question.all
-        render :index
+        
+        
+            render :index
+
     end
 
     def create

@@ -25,7 +25,7 @@ class AnswerQuestionForm extends React.Component {
     }
     render () {
         return (<div>
-           <form onSubmit={this.handleSubmit}>
+           <form onSubmit={this.handleSubmit} className='card'>
                 <input 
                 type="text" 
                 placeholder="Answer Question..."
