@@ -376,3 +376,7 @@ QUESTION FEED
     transition: border-color .5s ease 180ms ease-in-out 0s;
     padding-top: 16px;
 }
+
+.session-errors {
+    text-align: center;
+}
