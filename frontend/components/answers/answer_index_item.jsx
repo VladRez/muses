@@ -3,9 +3,13 @@ import React from 'react';
 const AnswerIndexItem = (props) => {
 
     return (
-      <div className='card'><h4>
-          {props.answer.answer_body}
-          </h4></div>
+        <div className='pageListItem'>
+            <div className="answerBase">
+                <p className="answerContent">
+                    {props.answer.answer_body}
+                </p>
+            </div>
+        </div>
     )
 }
 

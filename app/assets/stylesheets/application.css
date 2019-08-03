@@ -411,5 +411,25 @@ QUESTION FEED
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     display: block;
+    /* tab-size: 4;
+    word-break: break-word; */
     font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+}
+
+
+
+.questionPage .answerBase {
+    padding: 16px 0;
+    border-top: 1px solid #e2e2e2;
+    position: relative;
+}
+
+.answerContent {
+    font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-size: 16px!important;
+    line-height: 1.75;
+    display: block;
+    margin-bottom: 0!important;
+    tab-size: 4;
+    word-break: break-word;
 }

@@ -24,7 +24,7 @@ class Question extends React.Component {
                 <div className="contentWrapper">
                     <div class="layout2colMain">
                         <div class="questionHeader">
-                            <h1 class="questionPageText">{question}</h1>
+                            <span class="questionPageText">{question}</span>
                         </div>
                         <AnswerIndexContainer answers={answers} />
                     </div>
