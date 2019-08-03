@@ -20,10 +20,17 @@ class Question extends React.Component {
 
         return (<div>
             <Link to='/'>All Questions</Link>
-            <div className="card">
-                <h3>{question}</h3>
+            <div className="questionPage">
+                <div className="contentWrapper">
+                    <div class="layout2colMain">
+                        <div class="questionHeader">
+                            <h1 class="questionPageText">{question}</h1>
+                        </div>
+                        <AnswerIndexContainer answers={answers} />
+                    </div>
                 </div>
-            <AnswerIndexContainer answers={answers} />
+            </div>
+            
         </div>)
     }
 }
