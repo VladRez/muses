@@ -433,3 +433,101 @@ QUESTION FEED
     tab-size: 4;
     word-break: break-word;
 }
+
+
+/*nav bar*/
+
+.siteHeader{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 800;
+    font-size: 14px;
+    color: #fff;
+    border-top: 2px solid #b92b27;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 3px 2px -2px rgba(200,200,200,0.2);
+    border-top: 0;
+}
+
+.headerInner {
+    width: 1002px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: row!important;
+    display: flex!important;
+}
+
+.headerLogo {
+    z-index: 1;
+    overflow: hidden; 
+    flex: none!important;
+}
+
+.siteHeader .headerLogo a {
+    display: block;
+    width: 80px;
+    min-width: 80px;
+    height: 50px;
+    background-size: 80px 23px;
+    background-image: url(https://raw.githubusercontent.com/VladRez/muses/master/app/assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.siteHeader .headerLogo a span {
+    display: none;
+}
+
+
+.siteHeader .headerContents {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1 1 auto!important;
+    min-width: 0!important;
+    min-height: 0!important;
+    display: flex!important;
+    margin-left: 8px!important;
+} 
+
+
+.siteHeader .headerNav{
+    float: none;
+    display: table-cell;
+    padding: 0 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.siteHeader .rightContents {
+    float: none;
+    display: flex!important;
+    width: 100%;
+    align-items: center!important;
+}
+
+.siteHeader .searchBar {
+    padding-left: 0;
+    padding-right: 8px;
+    padding-top: 12px;
+}
+
+.searchBar {
+    flex-grow: 1;
+    padding: 10px 0 11px 14px;
+}
+
+.headerProfile {
+    height: 100%!important;
+}
+
+.askWrapper {
+    
+}
