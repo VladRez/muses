@@ -46,7 +46,7 @@ class SiteHeader extends React.Component {
                     <div className="rightContents">
                         <div className="askBar">
                             <div className="lookupBarSelector">
-                                <input onChange={this.searchQuestion()} className="selectorInput" type="text" />
+                                <input onChange={this.searchQuestion()} placeholder="Search Muses" className="selectorInput" type="text" />
                             </div>
                         </div>
                     </div>

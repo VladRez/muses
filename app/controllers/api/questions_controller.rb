@@ -22,6 +22,7 @@ class Api::QuestionsController < ApplicationController
     def show
         @question = Question.find_by(id: params[:id])
         @answers = @question.answers
+        @users = @answers.map {|ans| ans.answer_author}.flatten.push @question.author
     end
 
     def destroy
