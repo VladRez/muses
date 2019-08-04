@@ -84,6 +84,8 @@ Session Form
     width: 100%;
     height: 100%;
     position: fixed;
+    background-color: #fafafaab;
+    filter: blur(10px)
 }
 
 .loggedOutPage .bgContainer{
