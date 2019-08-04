@@ -513,21 +513,51 @@ QUESTION FEED
     align-items: center!important;
 }
 
-.siteHeader .searchBar {
+/*search bar*/
+.siteHeader .askBar {
     padding-left: 0;
     padding-right: 8px;
     padding-top: 12px;
 }
 
-.searchBar {
+.askBar {
     flex-grow: 1;
     padding: 10px 0 11px 14px;
 }
 
+.siteHeader .askBar .lookupBarSelector {
+    display: block;
+}
+
+.lookupBarSelector {
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    font-size: 13px;
+}
+
+.siteHeader .askBar .lookupBarSelector .selectorInput {
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding-left: 26px;
+    background: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png) no-repeat 8px center;
+    background-size: 13px;
+    font-size: 15px;
+    line-height: 1.4;
+    display: block;
+    min-height: auto;
+    width: 100%;
+}
+
+/**/
 .headerProfile {
     height: 100%!important;
 }
 
 .askWrapper {
-    
+    width: 100%;
+        box-sizing: border-box;
+    vertical-align: middle;
+    position: static;
 }
