@@ -28,7 +28,7 @@ class CreateQuestionForm extends React.Component {
                 placeholder="What is your question or link?"
                 value={this.state.question}
                 onChange={this.update('question')}/>
-                <input type="submit" value="Add Question"/>
+                <input className="submitButton" type="submit" value="Add Question"/>
            </form>
         </div>)
     }

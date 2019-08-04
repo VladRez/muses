@@ -40,7 +40,7 @@ class SiteHeader extends React.Component {
                     </div>
                     <div className="headerContents">
                         <div className="headerNav">
-                            <button onClick={this.props.logout}>Log Out</button>
+                            <button className="submitButton" style={{marginTop: '10px'}} onClick={this.props.logout}>Log Out</button>
                         </div>
                     </div>
                     <div className="rightContents">

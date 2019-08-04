@@ -31,7 +31,7 @@ class AnswerQuestionForm extends React.Component {
                 placeholder="Answer Question..."
                 value={this.state.answer_body}
                 onChange={this.update('answer_body')}/>
-                <input type="submit" value="Submit"/>
+                <input className="submitButton" type="submit" value="Submit"/>
            </form>
         </div>)
     }
