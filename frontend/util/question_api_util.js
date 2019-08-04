@@ -19,3 +19,16 @@ export const fetchQuestions = () => (
       data: {question: question}
     })
   );
+
+  export const filterQuestions = (questions, query) => {
+    
+
+    for(let k in questions) {
+      let question = questions[k].question
+      if (!question.includes(query)){
+        delete questions[k]
+      }
+    }
+    
+    return questions
+  }

@@ -22,9 +22,9 @@ class Question extends React.Component {
             <Link to='/'>All Questions</Link>
             <div className="questionPage">
                 <div className="contentWrapper">
-                    <div class="layout2colMain">
-                        <div class="questionHeader">
-                            <span class="questionPageText">{question}</span>
+                    <div className="layout2colMain">
+                        <div className="questionHeader">
+                            <span className="questionPageText">{question}</span>
                         </div>
                         <AnswerIndexContainer answers={answers} />
                     </div>
