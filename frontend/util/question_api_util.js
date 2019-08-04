@@ -21,11 +21,11 @@ export const fetchQuestions = () => (
   );
 
   export const filterQuestions = (questions, query) => {
-    
+    let re = new RegExp(query, 'i')
 
     for(let k in questions) {
       let question = questions[k].question
-      if (!question.includes(query)){
+      if (!re.test(question)){
         delete questions[k]
       }
     }

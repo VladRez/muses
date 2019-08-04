@@ -1,24 +1,36 @@
 import React from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Route, Redirect, withRouter } from "react-router";
 
 class SiteHeader extends React.Component {
     constructor(props) {
         super(props);
-
+        
         
     }
 
     searchQuestion() {
-        
+       
         return (e) => {
+
+          
+            if (this.props.history.location.pathname !== '/'){
+                this.props.history.push('/')
+                this.setState({})
+            }
+                
+        
             this.props.search(this.props.questions, e.target.value)
         }
     }
     
 
     render() {
-
+        
         const navHead = () => {
+            
+         
+
             return (<div className="siteHeader">
                 <div className="headerInner">
                     <div className="headerLogo">
@@ -50,7 +62,7 @@ class SiteHeader extends React.Component {
     
 }
 
-export default SiteHeader
+export default withRouter(SiteHeader)
 /*
 const SiteHeader = (props) => {
 
