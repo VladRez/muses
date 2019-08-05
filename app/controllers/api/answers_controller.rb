@@ -9,12 +9,18 @@ class Api::AnswersController < ApplicationController
     end
 
     def create
+        debugger
         @answer = Answer.new(answer_params)
         @answer[:question_id] = params[:question_id]
         
         if @answer.save
             @question = Question.find_by(id: params[:question_id])
-            @answers = @question.answers
+            @answers  = @question.answers
+            @comments = @answers.map {|ans| ans.comments}.flatten
+                question_user =  [@question.author]
+                answers_users =  @answers.map {|ans| ans.answer_author}.flatten
+                comments_users = @comments.map {|cmt| cmt.comment_author}.flatten
+            @users    =  question_user + answers_users + comments_users
             render 'api/questions/show'
            
         else

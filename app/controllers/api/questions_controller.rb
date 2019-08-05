@@ -11,11 +11,16 @@ class Api::QuestionsController < ApplicationController
         
         @question = Question.new(question_params)
         if @question.save
-            @answers = @question.answers
+            @answers  = @question.answers
+            @comments = @answers.map {|ans| ans.comments}.flatten
+                question_user =  [@question.author]
+                answers_users =  @answers.map {|ans| ans.answer_author}.flatten
+                comments_users = @comments.map {|cmt| cmt.comment_author}.flatten
+            @users    =  question_user + answers_users + comments_users
             
             render :show
         else
-            render json: @question.errors.full_messages, status: 401
+            render json: [@question.errors.full_messages], status: 401
         end
     end
 
