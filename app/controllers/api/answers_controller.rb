@@ -9,7 +9,7 @@ class Api::AnswersController < ApplicationController
     end
 
     def create
-        debugger
+        
         @answer = Answer.new(answer_params)
         @answer[:question_id] = params[:question_id]
         
