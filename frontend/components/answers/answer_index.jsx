@@ -8,7 +8,6 @@ class AnswerIndex extends React.Component {
     render() {
 
         let answers = this.props.answers.map(answer => {
-
             return <AnswerIndexItemContainer key={answer.id} answer={answer} />
         })
 

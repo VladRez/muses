@@ -399,7 +399,25 @@ QUESTION FEED
     padding-bottom: 4px!important;
     
 }
+/*question page answer*/
+.uMarginToplg{
+    margin-top: 32px!important
+}
 
+.questionPageAnswerHeader {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    padding-bottom: 7px;
+}
+
+.answerCount {
+
+}
 
 .questionPageText {
     font-weight: bold;
@@ -413,17 +431,45 @@ QUESTION FEED
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     display: block;
-    /* tab-size: 4;
-    word-break: break-word; */
     font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
 }
-
-
 
 .questionPage .answerBase {
     padding: 16px 0;
     border-top: 1px solid #e2e2e2;
     position: relative;
+}
+.questionPage .answerBase:first-child{
+    /* border-top: none; */
+}
+
+.answerHeader {
+    margin-top: 0;
+    display: flex!important;
+}
+
+.answerHeaderContent {
+    justify-content: space-between!important;
+    width: 100%!important;
+    margin-right: 8px!important;
+}
+
+.answerHeaderContentItem {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 2px;
+}
+
+.answerHeaderContentItem .userName a{
+    color: #333;
+    text-decoration: none;
+}
+
+
+.answerHeaderPhoto {
+    -webkit-box-flex: 0!important;
+    flex: none!important;
 }
 
 .answerContent {
@@ -435,7 +481,6 @@ QUESTION FEED
     tab-size: 4;
     word-break: break-word;
 }
-
 
 /*nav bar*/
 
@@ -488,7 +533,6 @@ QUESTION FEED
     display: none;
 }
 
-
 .siteHeader .headerContents {
     width: 100%;
     box-sizing: border-box;
@@ -507,6 +551,8 @@ QUESTION FEED
     position: relative;
     z-index: 1;
 }
+
+
 
 .siteHeader .rightContents {
     float: none;
@@ -551,6 +597,7 @@ QUESTION FEED
     min-height: auto;
     width: 100%;
 }
+
 
 /**/
 .headerProfile {

@@ -5,7 +5,7 @@ import AnswerIndexItem from './answer_index_item'
 const mapStateToProps = (state, ownProps) => {
     
     return { 
-
+        user: state.entities.users[ownProps.answer.answer_author_id]
     }
 }
 

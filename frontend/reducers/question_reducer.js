@@ -16,7 +16,7 @@ const questionReducer = (state = _nullQuestions, action) => {
         case RECEIVE_QUESTION:
             let qst = action.payload.question
             let id = qst.id
-            return Object.assign({},state, {[id]: qst})
+            return Object.assign({}, {[id]: qst})
         default:
             return state
     }
