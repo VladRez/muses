@@ -1,4 +1,6 @@
 import React from 'react';
+import CommentFormContainer from '../comment/comment_form_container'
+import CommentIndexContainer from '../comment/comment_index_container'
 
 const AnswerIndexItem = (props) => {
     return (
@@ -17,6 +19,15 @@ const AnswerIndexItem = (props) => {
                     {props.answer.answer_body}
                 </p>
             </div>
+
+            <div className="answerActionBar">
+            </div>
+    
+            <div className="threadedComments">
+              <CommentFormContainer />
+              <CommentIndexContainer answerId={props.answer.id}/>
+            </div>
+
         </div>
     )
 }
