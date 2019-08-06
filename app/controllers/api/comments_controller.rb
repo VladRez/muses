@@ -1,9 +1,10 @@
 class Api::CommentsController < ApplicationController
 
     def create
+        
         @comment = Comment.new(comment_params)
         @comment.answer_id = params[:answer_id]
-
+        
         if @comment.save
             @question = Question.find_by(id: params[:question_id])
             @answers  = @question.answers
