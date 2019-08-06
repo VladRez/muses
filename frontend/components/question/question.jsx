@@ -8,6 +8,7 @@ class Question extends React.Component {
     componentDidMount() {
         let id = this.props.match.params.question_id
         this.props.fetchQuestion(id)
+        this.props.fetchTopics()
     }
 
     render() {
@@ -19,7 +20,7 @@ class Question extends React.Component {
         answers = this.props.answers
 
         return (<div>
-            <Link to='/'>All Questions</Link>
+            {/* <Link to='/'>All Questions</Link> */}
             <div className="questionPage">
                 <div className="contentWrapper">
                     <div className="layout2colMain">
