@@ -5,8 +5,14 @@ class TopicIndex extends React.Component {
 
     render() {
         
-        
-        return (<div>TOPIC INDEX</div>)
+        const topics = this.props.questionTopics.map(topic=>{
+            return <div key={topic.id}className="questionTopicHeaderListItem">
+                <a href="#">{topic.name}</a>
+            </div>
+        })
+        return (<div className="questionTopicHeaderList">
+            {topics}
+        </div>)
     }
 }
 
