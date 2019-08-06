@@ -1,5 +1,6 @@
 json.question do
     json.extract! @question, :id, :question, :question_author_id
+    json.topics @question.topics
     json.created_at @question.created_at.to_formatted_s(:iso8601)
 end
 
@@ -28,6 +29,16 @@ json.users do
         end
     end
 end
+
+json.topics do
+    @topics.each do |topic|
+        json.set! topic.id do
+            json.extract! topic, :id, :name
+        end
+    end
+end
+
+
 
 
 
