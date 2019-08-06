@@ -610,3 +610,132 @@ QUESTION FEED
     vertical-align: middle;
     position: static;
 }
+
+
+/*between answer and comments*/
+.answerActionBar {
+    position: relative;
+    margin-bottom: -12px;
+}
+
+/*Comments*/
+
+
+.threadedComments {
+    font-size: 13px;
+    display: block;
+    padding: 16px;
+    margin-top: 16px!important;
+    /* margin-top: 8px; */
+    background-color: #fafafa;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    border-color: #efefef;
+    position: relative;
+    min-height: 32px;
+}
+
+.addCommentGroup {
+    display: flex!important;
+}
+
+.addCommentGroup > form {
+    width: 100%;
+    margin-left: 12px;
+}
+
+.addCommentProfileAvatar {
+    display: inline-flex!important;
+    flex: none!important;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.addCommentProfileAvatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    color: transparent;
+} 
+
+.addCommentInput{
+    margin-left: 12px;
+    position: relative;
+    vertical-align: middle;
+    word-break: normal;
+    font-size: 13px;
+    line-height: 1.5;
+    vertical-align: middle;
+    min-height: 32px;
+    border-radius: 20px;
+    padding: 4px 16px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    /*to fill the form space*/
+    width: 80%;
+}
+
+/*comment list*/
+
+.commentListWrapper {
+    position: relative;
+}
+
+.commentListWrapper .comment {
+    padding-top: 8px;
+}
+
+.commentHeader {
+    display: flex!important;
+}
+
+.commentListWrapper .comment .commentHeader .commentProfileAvatar {
+    flex: none!important;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: visible;
+    
+
+}
+
+.commentListWrapper .comment .commentHeader .commentProfileAvatar img{
+    border: 0;
+    color: transparent;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding-bottom: 2px;
+}
+
+.commentListWrapper .comment .commentHeader .commentDetails {
+    box-sizing: border-box;
+    word-break: break-word;
+    margin-left: 12px;
+}
+
+/*as span*/
+.commentListWrapper .comment .commentHeader .commentProfileFullName {
+    margin-left: 12px;
+}
+
+
+.commentListWrapper .comment .commentHeader .commentDetails .commentMetaData {
+    color: #949494;
+    padding-bottom: 4px;
+    margin-left: 12px;
+}
+
+.commentListWrapper .comment .commentBodyText {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    position: relative;
+    display: inline;
+    tab-size: 4;
+    word-break: break-word;
+}
+
