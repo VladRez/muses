@@ -12,6 +12,14 @@ json.answers do
     end
 end
 
+json.comments do
+    @comments.each do |cmnt|
+        json.set! cmnt.id do 
+            json.extract! cmnt, :id, :answer_id, :comment_body, :comment_author_id
+            json.created_at cmnt.created_at.to_formatted_s(:iso8601)
+        end
+    end
+end
 
 json.users do
     @users.each do |user|
@@ -20,4 +28,6 @@ json.users do
         end
     end
 end
+
+
 
