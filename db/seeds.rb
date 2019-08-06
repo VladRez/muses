@@ -30,33 +30,40 @@ dummy_users = [
 ]
 
 
-
-
 dummy_users.each {|user| User.create(user)}
 
+dummy_topics = ["Politics", "Law", "Government", "Judiciary", "Humanities", "Life", "Relationships", "Self", 
+    "Science", "Technology", "Engineering", "Mathematics", "Recreation", "Sports", "Travel", "Activities", "Literature", 
+    "Languages", "Communication", "Business", "Work", "Careers", "Art", "Design", "Style", "Medicine",  "Healthcare", 
+    "Food", "Cuisines", "Cooking",  "Education",  "Schools",  "Learning",  "News", "Entertainment"]
+
+Topic.destroy_all
+
+dummy_topics.each {|topic| Topic.create(name: topic)}
+
 dummy_questions = [
-{question_author_id: User.all.sample.id, question: 'What one tip changed your writing forever?'},
-{question_author_id: User.all.sample.id, question: 'How do top students study?'},
-{question_author_id: User.all.sample.id, question: 'What is the biggest fear that programmers and data scientists have?'},
-{question_author_id: User.all.sample.id, question: 'How do data scientists use statistics?'},
-{question_author_id: User.all.sample.id, question: 'Why do economists look at descriptive statistics and plot data before running regressions?'},
-{question_author_id: User.all.sample.id, question: 'What is your side hustle and how do you do it?'},
-{question_author_id: User.all.sample.id, question: 'What are the things that no one tells you about beginning a startup?'},
-{question_author_id: User.all.sample.id, question: 'What are the most interesting facts about human behavior?'},
-{question_author_id: User.all.sample.id, question: 'Is there one secret about luxury cars that people should know?'},
-{question_author_id: User.all.sample.id, question: 'How do you keep yourself focused on your goals?'},
-{question_author_id: User.all.sample.id, question: 'How do you make a good comic book?'},
-{question_author_id: User.all.sample.id, question: 'How do I conduct meetings effectively?'},
-{question_author_id: User.all.sample.id, question: 'How do I successfully compare signed and unsigned integers in C++?'},
-{question_author_id: User.all.sample.id, question: 'How do I become a good quant? What technical skills should I learn and improve if I’m a new graduate?'},
-{question_author_id: User.all.sample.id, question: 'How do I turn an idea into a startup?'},
-{question_author_id: User.all.sample.id, question: 'Could I buy a civilianized version of a fighter jet?'},
-{question_author_id: User.all.sample.id, question: 'How do I get my debut novel published by a traditional publisher?'},
-{question_author_id: User.all.sample.id, question: 'How does one get accepted to Caltech as an undergraduate?'},
-{question_author_id: User.all.sample.id, question: 'How do I make ice cream at home?'},
-{question_author_id: User.all.sample.id, question: 'How do I learn deep learning in 2 months?'},
-{question_author_id: User.all.sample.id, question: 'Why is this world full of millionaires and billionaires compared to before?'},
-{question_author_id: User.all.sample.id, question: 'How do companies succeed in making you purchase products that are exactly the same of others but just cost more?'}
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'What one tip changed your writing forever?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do top students study?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'What is the biggest fear that programmers and data scientists have?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do data scientists use statistics?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'Why do economists look at descriptive statistics and plot data before running regressions?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'What is your side hustle and how do you do it?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'What are the things that no one tells you about beginning a startup?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'What are the most interesting facts about human behavior?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'Is there one secret about luxury cars that people should know?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do you keep yourself focused on your goals?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do you make a good comic book?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I conduct meetings effectively?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I successfully compare signed and unsigned integers in C++?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I become a good quant? What technical skills should I learn and improve if I’m a new graduate?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I turn an idea into a startup?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'Could I buy a civilianized version of a fighter jet?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I get my debut novel published by a traditional publisher?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How does one get accepted to Caltech as an undergraduate?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I make ice cream at home?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do I learn deep learning in 2 months?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'Why is this world full of millionaires and billionaires compared to before?'},
+{question_author_id: User.all.sample.id, topics: Topic.all.sample(rand(1..Topic.all.length)).map {|t| t.id}, question: 'How do companies succeed in making you purchase products that are exactly the same of others but just cost more?'}
 ]
 
 dummy_questions.each {|question| Question.create(question)}
@@ -275,3 +282,6 @@ dummy_comments =
 ]
 
 dummy_comments.each {|comment| Comment.create(comment)}
+
+
+
