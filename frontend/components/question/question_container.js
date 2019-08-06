@@ -7,8 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     let qId = ownProps.match.params.question_id
     const question = state.entities.questions[qId]
     const answers = Object.values(state.entities.answers)
-    
-    const questionTopics = question.topics !== undefined ? question.topics.map(t=>state.entities.topics[t]) : []
+    const questionTopics = (question !== undefined) && (question.topics !== undefined) ? question.topics.map(t=>state.entities.topics[t]) : []
 
     return {
         question,
