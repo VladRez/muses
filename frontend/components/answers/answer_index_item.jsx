@@ -3,7 +3,7 @@ import CommentFormContainer from '../comment/comment_form_container'
 import CommentIndexContainer from '../comment/comment_index_container'
 
 const AnswerIndexItem = (props) => {
-    debugger
+    
     return (
         <div className='pageListItem'>
             <div className='answerBase'>
@@ -16,7 +16,7 @@ const AnswerIndexItem = (props) => {
                             <a href="" className="userDetails">{`${props.user.first_name} ${props.user.last_name}`}</a>
                         </span>
                         <span className="answerHeaderContentItem">
-                            <div className="userFacts">Answered TIMESTAMP</div>
+                            <div className="userFacts">{`Answered ${props.date}`}</div>
                         </span>
                     </div>
                 </div>
