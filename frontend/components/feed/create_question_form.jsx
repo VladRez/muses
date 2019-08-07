@@ -23,7 +23,7 @@ class CreateQuestionForm extends React.Component {
     render () {
         return (<div>
            <form onSubmit={this.handleSubmit} className='askQuestionButton'>
-                <input 
+                <input className="askQuestionInput"
                 type="text" 
                 placeholder="What is your question or link?"
                 value={this.state.question}

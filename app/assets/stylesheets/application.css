@@ -354,6 +354,11 @@ QUESTION FEED
     display: block;
 }
 
+.askQuestionInput {
+    width: 100%;
+}
+
+
 .questionText {
     font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
     font-weight: bold;
@@ -742,7 +747,7 @@ QUESTION FEED
     line-height: 1.5;
     vertical-align: middle;
     min-height: 32px;
-    border-radius: 20px;
+    border-radius: 20px!important;
     padding: 4px 16px;
     min-height: 0;
     margin: 0;
@@ -751,6 +756,11 @@ QUESTION FEED
 
     /*to fill the form space*/
     width: 80%;
+}
+
+.addCommentButton {
+    border-radius: 10px; 
+    margin-left: 2px;
 }
 
 /*comment list*/

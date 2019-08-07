@@ -32,7 +32,7 @@ class CommentAnswerForm extends React.Component {
                 onChange={this.update('comment_body')}
                 value={this.state.comment_body} 
                 placeholder="Add a Comment" />
-                <input type="submit" className="submitButton" value="Add Comment"/>
+                <input type="submit" className="submitButton addCommentButton" value="Add Comment"/>
             </form>
         </div>)
     }
