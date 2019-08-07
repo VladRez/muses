@@ -427,7 +427,16 @@ QUESTION FEED
     text-decoration: none;
 }
 
+.questionAnswerForm {
+    align-content: flex-end;
+}
+.questionAnswerForm textarea {
+    width: 100%;
+}
 
+.questionAnswerForm .submitButton {
+    margin: 2px 2px;
+}
 /*question page answer*/
 .uMarginToplg{
     margin-top: 32px!important
