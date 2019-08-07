@@ -21,6 +21,8 @@ class Api::AnswersController < ApplicationController
                 answers_users =  @answers.map {|ans| ans.answer_author}.flatten
                 comments_users = @comments.map {|cmt| cmt.comment_author}.flatten
             @users    =  question_user + answers_users + comments_users
+            @topics = Topic.all
+
             render 'api/questions/show'
            
         else
