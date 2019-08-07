@@ -32,7 +32,7 @@ class AnswerQuestionForm extends React.Component {
                 value={this.state.answer_body}
                 onChange={this.update('answer_body')}/>
                 <input className="submitButton" type="submit" value="Submit"/>
-           <textarea name="" id="" cols="30" rows="10"></textarea>
+           
            </form>
         </div>)
     }
