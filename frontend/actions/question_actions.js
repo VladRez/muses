@@ -40,6 +40,11 @@ export const createQuestion = (question) => (dispatch =>(
     err=>(dispatch(receiveQuestionErrors(err)))))
 ))
 
+export const updateQuestion = (question) => (dispatch =>{
+    return APIUtil.updateQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
+    err=>(dispatch(receiveQuestionErrors(err)))))
+})
+
 export const searchQuestion = (question, query) => (dispatch) =>(
     APIUtil.fetchQuestions().then(questions=>(dispatch(receiveAllQuestions(APIUtil.filterQuestions(questions,query)))),
          err=>(dispatch(receiveQuestionErrors(err))))
