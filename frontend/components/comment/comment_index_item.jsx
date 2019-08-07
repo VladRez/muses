@@ -4,9 +4,7 @@ const CommentIndexItem = (props) => {
     
     let userFullName = `${props.user.first_name} ${props.user.last_name}`
     let commentBody = props.comment.comment_body
-    let date = new Date(props.comment.created_at)
-    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    let formattedDate = `${months[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}`;
+    
     return (
         <div className="comment">
             <div className="commentContents">
@@ -16,7 +14,7 @@ const CommentIndexItem = (props) => {
                     </div>
                     <div className="commentDetails">
                         <span className="commentProfileFullName">{userFullName}</span>
-                        <div className="commentMetaData">{`Updated ${formattedDate}`}</div>
+                        <div className="commentMetaData">{`Updated ${props.date}`}</div>
                     </div>
                 </div>
             </div>

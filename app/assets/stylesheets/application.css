@@ -415,7 +415,8 @@ QUESTION FEED
     display: inline-block!important;
     user-select: none;
     padding: 4px 6px;
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
+    background: #e6e6e6;
     border-radius: 4px;
     cursor: pointer;
     color: #666;
@@ -442,6 +443,7 @@ QUESTION FEED
     font-size: 18px;
     padding-bottom: 7px;
 }
+
 
 .answerCount {
 
@@ -476,29 +478,63 @@ QUESTION FEED
     display: flex!important;
 }
 
+
 .answerHeaderContent {
-    justify-content: space-between!important;
-    width: 100%!important;
-    margin-right: 8px!important;
+    clear: both;
+    position: relative;
+    margin-top: 8px;
+    min-height: 40px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.answerHeaderContentItem {
+.answerHeaderContentProfileAvatar{
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+    position: relative;
+    display: inline-flex!important;
+}
+
+.answerHeaderContentProfileAvatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.answerHeaderContentProfileText {
+    margin-left: 8px;
+    box-sizing: border-box;
+    word-break: break-word;
+    align-self: center!important;
+    flex: 1 1 auto!important;
+    min-width: 0!important;
+    min-height: 0!important;
+    width: 100%!important;
+}
+
+.answerHeaderContentProfileText .answerHeaderContentItem {
     font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
     display: block;
     line-height: 1.2em;
     margin-bottom: 2px;
 }
 
-.answerHeaderContentItem .userName a{
+.answerHeaderContentProfileText .answerHeaderContentItem .userDetails {
     color: #333;
     text-decoration: none;
+    cursor: pointer;
 }
 
-
-.answerHeaderPhoto {
-    -webkit-box-flex: 0!important;
-    flex: none!important;
+.answerHeaderContentProfileText .answerHeaderContentItem .userFacts {
+    font-size: 13px;
+    color: #949494;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
 
 .answerContent {
     font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
