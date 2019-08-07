@@ -31,7 +31,7 @@ class AnswerQuestionForm extends React.Component {
                 placeholder="Answer Question..."
                 value={this.state.answer_body}
                 onChange={this.update('answer_body')}/> */}
-                <textarea onChange={this.update('answer_body')} placeholder="Answer Question..." name="">{this.state.answer_body}</textarea>
+                <textarea onChange={this.update('answer_body')} placeholder="Answer Question..." value={this.state.answer_body}/>
                 <input className="submitButton" type="submit" value="Submit" />
 
             </form>

@@ -15,18 +15,23 @@ class Question extends React.Component {
     render() {
         let question = '';
         let answers = [];
-        
-        if (this.props.question !== undefined)
+        let questionTopics = [];
+        if (this.props.question !== undefined){
             question = this.props.question.question
-        answers = this.props.answers
-
+            if(Object.values(this.props.topics).length){
+                questionTopics = this.props.question.topics.map(t=>this.props.topics[t])
+            }
+            answers = this.props.answers
+        }
+        
+        
         return (<div>
             {/* <Link to='/'>All Questions</Link> */}
             <div className="questionPage">
                 <div className="contentWrapper">
                     <div className="layout2colMain">
                         <div className="questionHeader">
-                            <TopicIndexContainer questionTopics={this.props.questionTopics}/>
+                            <TopicIndexContainer questionTopics={questionTopics}/>
                             <span className="questionPageText">{question}</span>
                         </div>
                         <AnswerIndexContainer answers={answers} />
