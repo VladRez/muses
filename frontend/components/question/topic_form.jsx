@@ -38,13 +38,13 @@ class TopicForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                
                
-                   <select  name='topics_drop_down' defaultValue={'DEFAULT'} onChange={this.handleChange}>
+                   <select className='topics_drop_down' name='topics_drop_down' defaultValue={'DEFAULT'} onChange={this.handleChange}>
                    {topicOptions}
                    </select>
                
                
 
-                <input type="submit" className="submitButton" value="Add Topic" />
+                <input type="submit" style={{padding: 5 + `px`}}className="submitButton" value="Add Topic" />
             </form>
         </div>)
     }
