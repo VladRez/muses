@@ -2,6 +2,8 @@ import {connect} from 'react-redux';
 import {fetchQuestion, deleteQuestion} from '../../actions/question_actions'
 import {fetchTopics} from '../../actions/topic_action'
 import Question from './question'
+import React from 'react'
+import EditQuestionFormContainer from './edit_question_form_container'
 
 const mapStateToProps = (state, ownProps) => {   
      
@@ -10,12 +12,15 @@ const mapStateToProps = (state, ownProps) => {
     const answers = Object.values(state.entities.answers)
     const topics = state.entities.topics
     const currentUserId = state.session['id']
+    const displayEdit = false;
     
     return {
         question,
         answers,
         topics,
-        currentUserId
+        currentUserId,
+        options: {displayEdit},
+        editForm: <EditQuestionFormContainer question={question} />
     }
 }
 
