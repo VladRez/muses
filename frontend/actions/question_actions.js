@@ -35,10 +35,10 @@ export const fetchQuestion = (id) => (dispatch) =>(
         err=>(dispatch(receiveQuestionErrors(err))))
 )
 
-export const createQuestion = (question) => (dispatch =>(
-    APIUtil.createQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
+export const createQuestion = (question) => (dispatch) =>{
+    return APIUtil.createQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
     err=>(dispatch(receiveQuestionErrors(err)))))
-))
+}
 
 export const updateQuestion = (question) => (dispatch =>{
     return APIUtil.updateQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 

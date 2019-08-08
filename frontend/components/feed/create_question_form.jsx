@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter, Redirect} from 'react-router-dom';
+import QuestionContainer from '../question/question_container'
 
 class CreateQuestionForm extends React.Component {
     constructor(props){
@@ -17,13 +18,12 @@ class CreateQuestionForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         this.props.action(this.state);
+        
         this.setState(this.props.question);
         
      
     }
-    componentDidMount(){
-        
-    }
+ 
     render () {
         return (<div>
            <form onSubmit={this.handleSubmit} className='askQuestionButton'>

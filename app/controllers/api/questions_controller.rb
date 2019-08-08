@@ -1,15 +1,18 @@
 class Api::QuestionsController < ApplicationController
 
     def index
+        
         @questions = Question.all
-    
+        
             render :index
 
     end
 
     def create
-        
+
+
         @question = Question.new(question_params)
+     
         if @question.save
             @answers  = @question.answers
             @comments = @answers.map {|ans| ans.comments}.flatten
@@ -20,7 +23,8 @@ class Api::QuestionsController < ApplicationController
             @topics = Topic.all
             render :show
         else
-            render json: [@question.errors.full_messages], status: 401
+            
+            render json: ['Question creatation failed'], status: 422
         end
     end
 

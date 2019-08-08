@@ -1,6 +1,7 @@
 class Question < ApplicationRecord
     validates :question, :question_author_id, presence: true
-
+    validates :question, uniqueness: true
+    
     belongs_to :author,
     foreign_key: :question_author_id,
             class_name: 'User'

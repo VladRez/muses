@@ -21,7 +21,7 @@
     overflow-y: auto;
     overflow-x: auto;
     margin: 0;
-    /* background: #fafafa; */
+    background: #fafafa;
 }
 
 html {
@@ -713,7 +713,8 @@ QUESTION FEED
     padding: 16px;
     margin-top: 16px!important;
     /* margin-top: 8px; */
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
+    background-color: #efefef;
     border: 1px solid #e2e2e2;
     border-radius: 3px;
     border-color: #efefef;
