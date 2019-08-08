@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Redirect} from 'react-router-dom';
 
 class CreateQuestionForm extends React.Component {
     constructor(props){
@@ -16,9 +16,13 @@ class CreateQuestionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.action(this.state)
-        // .then(cb)
-        this.setState(this.props.question)
+        this.props.action(this.state);
+        this.setState(this.props.question);
+        
+     
+    }
+    componentDidMount(){
+        
     }
     render () {
         return (<div>

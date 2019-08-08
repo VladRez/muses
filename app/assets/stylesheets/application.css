@@ -290,7 +290,7 @@ QUESTION FEED
 */
 
 .feed {
-    background: #fafafa;
+    /* background: #fafafa; */
 }
 
 .feed .contentWrapper,
@@ -301,6 +301,7 @@ QUESTION FEED
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 32px;
+   
 }
 
 
