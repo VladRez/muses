@@ -16,23 +16,29 @@ class Question extends React.Component {
         let question = '';
         let answers = [];
         let questionTopics = [];
+        let isAuthor = false;
         if (this.props.question !== undefined){
             question = this.props.question.question
             if(Object.values(this.props.topics).length){
                 questionTopics = this.props.question.topics.map(t=>this.props.topics[t])
             }
             answers = this.props.answers
+             isAuthor = this.props.question.question_author_id === this.props.currentUserId
         }
         
-        
+            
+       let deleteLink = isAuthor ? <a href="" onClick={()=>this.props.deleteQuestion(this.props.match.params.question_id)}>Remove</a> : ''
+    
         return (<div>
             {/* <Link to='/'>All Questions</Link> */}
+            
             <div className="questionPage">
                 <div className="contentWrapper">
                     <div className="layout2colMain">
                         <div className="questionHeader">
                             <TopicIndexContainer questionTopics={questionTopics}/>
                             <span className="questionPageText">{question}</span>
+                            {deleteLink}
                         </div>
                         <AnswerIndexContainer answers={answers} />
                     </div>

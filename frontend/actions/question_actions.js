@@ -35,6 +35,11 @@ export const fetchQuestion = (id) => (dispatch) =>(
         err=>(dispatch(receiveQuestionErrors(err))))
 )
 
+export const deleteQuestion = (id) => (dispatch) =>(
+    APIUtil.deleteQuestion(id).then(question=>(dispatch(receiveAllQuestions(question))),
+        err=>(dispatch(receiveQuestionErrors(err))))
+)
+
 export const createQuestion = (question) => (dispatch) =>{
     return APIUtil.createQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
     err=>(dispatch(receiveQuestionErrors(err)))))

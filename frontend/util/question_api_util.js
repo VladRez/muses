@@ -28,6 +28,13 @@ export const updateQuestion = (question) => (
   })
 );
 
+export const deleteQuestion = (questionId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/questions/${questionId}`
+  })
+);
+
 export const filterQuestions = (questions, query) => {
   let re = new RegExp(query, 'i')
 
@@ -40,3 +47,5 @@ export const filterQuestions = (questions, query) => {
 
   return questions
 }
+
+
