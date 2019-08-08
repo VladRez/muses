@@ -2,8 +2,7 @@ import {connect} from 'react-redux';
 import {fetchQuestion, deleteQuestion} from '../../actions/question_actions'
 import {fetchTopics} from '../../actions/topic_action'
 import Question from './question'
-import React from 'react'
-import EditQuestionFormContainer from './edit_question_form_container'
+
 
 const mapStateToProps = (state, ownProps) => {   
      
@@ -20,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
         topics,
         currentUserId,
         options: {displayEdit},
-        editForm: <EditQuestionFormContainer question={question} />
+        
     }
 }
 

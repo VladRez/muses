@@ -25,7 +25,7 @@ class Api::QuestionsController < ApplicationController
             render :show
         else
             
-            render json: ['Question creatation failed'], status: 422
+            render json: @question.errors.full_messages, status: 422
         end
     end
 

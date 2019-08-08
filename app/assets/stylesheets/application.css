@@ -406,6 +406,20 @@ QUESTION FEED
     padding-bottom: 4px!important;
 }
 
+
+/* to be deleted*/
+.questionActions{
+
+}
+
+.questionActions a {
+    text-decoration: none;
+    color: crimson;
+}
+
+.questionActions button {
+    margin-left: 2px;
+}
 /*Header Topic List*/
 .questionTopicHeaderList {
     display: flex;
@@ -440,14 +454,19 @@ QUESTION FEED
     
 }
 
-.questionAnswerForm {
+.questionAnswerForm,
+.updateQuestionForm {
     align-content: flex-end;
 }
 .questionAnswerForm textarea {
     width: 100%;
 }
 
-.questionAnswerForm .submitButton {
+.updateQuestionForm input[type="text"] {
+    width: 85%;
+}
+.questionAnswerForm .submitButton,
+.updateQuestionForm .submitButton {
     margin: 2px 2px;
 }
 /*question page answer*/

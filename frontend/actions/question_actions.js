@@ -15,10 +15,14 @@ export const receiveQuestion = (payload) =>({
     payload
 })
 
-export const receiveQuestionErrors = (errors) =>({
+export const receiveQuestionErrors = (errors) =>{
+    
+    debugger
+    return {
+   
     type: RECEIVE_QUESTION_ERRORS,
     errors
-})
+}}
 
 export const filteredQuestions = (questions) =>({
     type: FILTERED_QUESTIONS,
@@ -40,9 +44,8 @@ export const deleteQuestion = (id) => (dispatch) =>(
         err=>(dispatch(receiveQuestionErrors(err))))
 )
 
-export const createQuestion = (question) => (dispatch) =>{
-    return APIUtil.createQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
-    err=>(dispatch(receiveQuestionErrors(err)))))
+export const createQuestion = (newQuestion) => (dispatch) =>{
+    return APIUtil.createQuestion(newQuestion).then(((retQuestion)=>dispatch(receiveQuestion(retQuestion))),((err)=>dispatch(receiveQuestionErrors(err))))
 }
 
 export const updateQuestion = (question) => (dispatch =>{
