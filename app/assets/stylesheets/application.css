@@ -293,7 +293,7 @@ QUESTION FEED
     /* background: #fafafa; */
 }
 
-.feed .contentWrapper,
+.contentWrapper,
 .questionPage .contentWrapper {
     width: 1002px;
     margin: 0 auto;
@@ -309,9 +309,51 @@ QUESTION FEED
     margin-left: -30px;
     font-size: 15px;
     line-height: 1.4;
+
+    /*fix topics and questions not aligning*/
+    display: flex;
 }
 
-.feed .layout3ColCenter {
+
+.layout3ColLeft .leftColInner {
+    top: 83px;
+    position: static;
+    width: 142px;
+    list-style: none;
+}
+
+.layout3ColLeft .leftColInner ul {
+    list-style: none;
+}
+
+.layout3ColLeft .leftColInner .topicItem {
+    margin-bottom: 8px;
+    padding: 4px;
+    margin-left: -4px;
+    border-radius: 3px;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink {
+    display: flex;
+    text-decoration: none;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink .topicItemLinkImage {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 3px;
+    flex: none!important;
+    position: relative!important;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink .topicLabel {
+    display: inline-block;
+    color: #666;
+    margin-left: 8px;
+}
+
+.layout3ColCenter {
     padding-left: 12px;
     width: 602px;
 }
@@ -324,7 +366,7 @@ QUESTION FEED
     margin-left: 202px;
 }
 
-.feed .addQuestionPrompt {
+.addQuestionPrompt {
     border: 1px solid #efefef;
     background-color: #fff;
     border-radius: 4px;

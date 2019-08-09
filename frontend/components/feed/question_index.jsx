@@ -12,7 +12,7 @@ class QuestionIndex extends React.Component {
             return <QuestionIndexItem key={idx} question={question} />
         })
 
-        return (<div>
+        return (<div className="layout3ColCenter">
             <div className="addQuestionPrompt">
                 <div className="userAsksHeader">
                     <CreateQuestionFormContainer />
