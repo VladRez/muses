@@ -26,7 +26,7 @@ class SiteHeader extends React.Component {
                         field: wildCard[0],
                         value: wildCard[1]
                     }
-                    
+
             } else {
                 params = {
                     field: 'question',
@@ -59,7 +59,7 @@ class SiteHeader extends React.Component {
                     <div className="rightContents">
                         <div className="askBar">
                             <div className="lookupBarSelector">
-                                <input onChange={this.searchQuestion()} placeholder="Search Muses" className="selectorInput" type="text" />
+                                <input id="headerSearchBar" onChange={this.searchQuestion()} placeholder="Search Muses" className="selectorInput" type="text" />
                             </div>
                         </div>
                     </div>

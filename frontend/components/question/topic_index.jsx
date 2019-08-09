@@ -1,14 +1,23 @@
 import React from 'react'
 import TopicFormContainer from './topic_form_container'
-class TopicIndex extends React.Component {
+import { withRouter } from "react-router";
 
+class TopicIndex extends React.Component {
+    filterQByTopic(name) {
+        // let params = {field: 'topic', value: `${id}`}
+        // this.props.history.push('/')
+        // // this.forceUpdate()
+        // this.props.fetchQuestions(params)
+        
+        document.getElementById('headerSearchBar').fire
+    }
     render() {
         
         let topics = [];
         if (this.props.questionTopics){
             topics = this.props.questionTopics.map(topic=>{
                 return <div key={topic.id} className="questionTopicHeaderListItem">
-                    <a href="#">{topic.name}</a>
+                    <span>{topic.name}</span>
                 </div>
             })
         }
@@ -19,4 +28,4 @@ class TopicIndex extends React.Component {
     }
 }
 
-export default TopicIndex
+export default withRouter(TopicIndex)

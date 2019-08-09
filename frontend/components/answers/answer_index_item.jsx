@@ -13,7 +13,8 @@ const AnswerIndexItem = (props) => {
                     </div>
                     <div className="answerHeaderContentProfileText">
                         <span className="answerHeaderContentItem">
-                            <a href="" className="userDetails">{`${props.user.first_name} ${props.user.last_name}`}</a>
+                            {/* <a href="" className="userDetails">{`${props.user.first_name} ${props.user.last_name}`}</a> */}
+                            <span className="userDetails">{`${props.user.first_name} ${props.user.last_name}`}</span> 
                         </span>
                         <span className="answerHeaderContentItem">
                             <div className="userFacts">{`Answered ${props.date}`}</div>

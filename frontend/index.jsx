@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       session: { id: window.currentUser.id }
     }
     //TO DO: delete currentUser before merge
+    delete window.currentUser
     store = configureStore(preloadedState);
   } else {
     store = configureStore();
@@ -24,5 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root)
-  window.store = store
+  // window.store = store
 });

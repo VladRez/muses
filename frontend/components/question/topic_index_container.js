@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import TopicIndex from './topic_index'
 import {fetchTopics} from '../../actions/topic_action'
-
+import {fetchQuestions} from '../../actions/question_actions'
 const mapStateToProps = (state, ownProps) => {
 let qtopics = [] 
  
@@ -18,6 +18,7 @@ return {
 const mapDispatchToProps = (dispatch) => {
 
     return {
+        fetchQuestions: (prms)=>dispatch(fetchQuestions(prms))
     }
 }
 

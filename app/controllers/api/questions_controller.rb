@@ -16,7 +16,8 @@ class Api::QuestionsController < ApplicationController
                     end
                 end
             when 'user'
-                users = User.all.select {|user| user.first_name.include?(params[:value]) || user.last_name.include?(params[:value])}
+                
+                users = User.all.select {|user| (user.first_name.downcase + user.last_name.downcase).match?(params[:value].downcase)}
                 @questions = users.map {|user| user.questions}.flatten
             when 'question'
                 @questions = Question.all.select {|question| question.question.include?(params[:value])}       
