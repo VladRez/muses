@@ -7,7 +7,7 @@ class TopicForm extends React.Component {
         this.state = this.props.question
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
-        console.log(this.state)
+
     }
 
     handleSubmit(e) {

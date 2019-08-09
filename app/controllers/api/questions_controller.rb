@@ -6,10 +6,20 @@ class Api::QuestionsController < ApplicationController
             when nil
                 @questions = Question.all
             when 'topic'
-                @questions = Question.all.select {|question| question.topics.include?(params[:value])}
+                str_search = Topic.all.select {|topic| topic.name.downcase.match?(params[:value])}.map {|topic| topic.id.to_s}
+                if str_search.empty?
+                    @questions = Question.all.select {|question| question.topics.include?(params[:value])}
+                else
+                    @questions = Question.all.select  do |question|
+                        merged = str_search.concat(question.topics)
+                        merged.any? {|topic| merged.count(topic) > 1}
+                    end
+                end
             when 'user'
-                users = User.all.select {|user| user.id.to_s === params[:value]}
-                @question = users.map {|user| user.questions}.flatten       
+                users = User.all.select {|user| user.first_name.include?(params[:value]) || user.last_name.include?(params[:value])}
+                @questions = users.map {|user| user.questions}.flatten
+            when 'question'
+                @questions = Question.all.select {|question| question.question.include?(params[:value])}       
         end
             render :index
     end

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
-import { searchQuestion } from '../../actions/question_actions'
+import { searchQuestion, fetchQuestions } from '../../actions/question_actions'
 import SiteHeader from './site_header';
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
     logout: ()=> dispatch(logout()),
-    search: (questions, query) => dispatch(searchQuestion(questions, query))
+    search: (questions, query) => dispatch(searchQuestion(questions, query)),
+    fetchQuestions: (prms)=>dispatch(fetchQuestions(prms))
 });
 
 export default connect(

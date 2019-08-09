@@ -13,14 +13,27 @@ class SiteHeader extends React.Component {
        
         return (e) => {
 
-          
             if (this.props.history.location.pathname !== '/'){
                 this.props.history.push('/')
-                this.setState({})
+                // this.setState({})
             }
-                
-        
-            this.props.search(this.props.questions, e.target.value)
+            // this.props.search(this.props.questions, e.target.value)
+            let params;
+
+            if (e.target.value.includes(':')){
+                let wildCard = e.target.value.split(':')
+                    params = {
+                        field: wildCard[0],
+                        value: wildCard[1]
+                    }
+                    
+            } else {
+                params = {
+                    field: 'question',
+                    value: e.target.value
+                }
+            }
+            this.props.fetchQuestions(params)
         }
     }
     
