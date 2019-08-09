@@ -1,4 +1,5 @@
 import {fetchTopics} from '../../actions/topic_action'
+import {fetchQuestions} from '../../actions/question_actions'
 import TopicFeed from './topic_feed'
 import {connect} from 'react-redux'
 const mapStateToProps = (state, ownProps) => {
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        fetchTopics: ()=>dispatch(fetchTopics())
+        fetchTopics: ()=>dispatch(fetchTopics()),
+        fetchQuestions: (prms)=>dispatch(fetchQuestions(prms))
     }
 }
 

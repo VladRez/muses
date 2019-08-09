@@ -26,8 +26,8 @@ export const filteredQuestions = (questions) =>({
     question: questions
 })
 
-export const fetchQuestions = () => (dispatch) =>(
-    APIUtil.fetchQuestions().then(questions=>(dispatch(receiveAllQuestions(questions))),
+export const fetchQuestions = (prms) => (dispatch) =>(
+    APIUtil.fetchQuestions(prms).then(questions=>(dispatch(receiveAllQuestions(questions))),
          err=>(dispatch(receiveQuestionErrors(err))))
 );
 

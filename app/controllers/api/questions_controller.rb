@@ -2,15 +2,19 @@ class Api::QuestionsController < ApplicationController
 
     def index
         
-        @questions = Question.all
-        
+        case params[:field]
+            when nil
+                @questions = Question.all
+            when 'topic'
+                @questions = Question.all.select {|question| question.topics.include?(params[:value])}
+            when 'user'
+                users = User.all.select {|user| user.id.to_s === params[:value]}
+                @question = users.map {|user| user.questions}.flatten       
+        end
             render :index
-            
-
     end
 
     def create
-
 
         @question = Question.new(question_params)
      
