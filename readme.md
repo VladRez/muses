@@ -57,7 +57,8 @@ A Quora clone where questions are asked, answered, and edited by users.
 
 #### User Account Authentification
 
-Passwords are secured using `BCrypt` to generate a *password digest*. A user's *session token* is generated, stored in the database, and stored on the client-side as a browser cookie to keep track of user's login session.
+Passwords are secured using the `BCrypt` gem to generate a *password digest*. 
+A user's login session is tracked by a generated *session token* stored in the database and on the client-side as a browser cookie.
 
 ```ruby
 def self.find_by_credentials(email, password)
@@ -83,11 +84,11 @@ def self.find_by_credentials(email, password)
 
 ![](docs/images/login.png)
 
-#### Main UI
+#### Main Question Feed
 
-On user sign-in a `GET` request is made against backend api and responds with a json. 
+On user login a `GET` request is made to a backend api. 
 
-The response json shape will be the same to maintain consistent access to the redux store throughout the application. 
+The api response will be a consolidated json object. This shape will be used consitently throughout the application to maintain reliable redux store access. 
 
 ```js
 entities:
@@ -111,14 +112,14 @@ entities:
 #### Filter Question feed by Topic
 
 
-The right hand side topics directly corrispond to the topics defined in the question's topics property. When clicking a topic the feed will only show questions with those particular topics.
+A right side panel contains a list of topics which directly corrispond to the topics defined in a question's `topics` property. 
+Clicking a topic will update the question feed.
 
 ![](docs/images/feedfilter.png)
 
 #### Question Search
 
-Typing in the search bar will make a `GET` request with params
-
+Typing in the search bar will make a `GET` request with the following params:
 
 ```js
 query = {
@@ -138,7 +139,7 @@ query = {
 
 ### Filter Search
 
-To make a specific search we split on a `:` and create one of the following objects. 
+Make a filtered search using a `:` .
 
 ```js
 query = {
@@ -153,7 +154,7 @@ query = {
 //
 query = {
     field: 'topic',
-    value: 'kari'
+    value: 'Cooking'
 }
 ```
 
@@ -161,11 +162,13 @@ query = {
 
 ### Question Page
 
-Since the redux store is consistent thorught the application multiple reducers can share the same action. 
-This means when a user views or answers a question, and/or comments on an answer more updated data is readily available.
+Since the redux store is consistent thorught the application multiple reducers share the same action.
+
+![](docs/images/editing.png)
+
+This means when a user views, answers questions, or comments on an answer the redux store is already updated with the latest data.
 
 ![](docs/images/questionpage.png)
-
 
 
 ## Future Planned features
@@ -179,7 +182,7 @@ Question Pages:
 + Replies to a comment.
 + Upvotes
 + Markdown and Media content for answers.
-
++ User profiles
 
 
 
