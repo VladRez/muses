@@ -12,13 +12,14 @@ const mapStateToProps = (state, ownProps) => {
     const topics = state.entities.topics
     const currentUserId = state.session['id']
     const displayEdit = false;
+    const displayEditBtn = 'Edit'
     
     return {
         question,
         answers,
         topics,
         currentUserId,
-        options: {displayEdit},
+        options: {displayEdit, displayEditBtn},
         
     }
 }

@@ -25,9 +25,10 @@ class Question extends React.Component {
     }
 
     displayEditForm(bln) {
-        this.setState({ displayEdit: bln })
-    }
+        let displayEditBtn = bln ? 'Cancel' : 'Edit'
 
+        this.setState({ displayEdit: bln, displayEditBtn })
+    }
     
     render() {
         let question = '';
@@ -48,7 +49,7 @@ class Question extends React.Component {
 
 
         let deleteLink = isAuthor ? <a href="" onClick={() => this.props.deleteQuestion(this.props.match.params.question_id)}>Remove</a> : ''
-        let editBtn = isAuthor ? <button id="editUpdateBtn" className="submitButton" onClick={() => this.displayEditForm(!this.state.displayEdit)}>Edit</button> : ''
+        let editBtn = isAuthor ? <button id="editUpdateBtn" className="submitButton" onClick={() => this.displayEditForm(!this.state.displayEdit)}>{this.state.displayEditBtn}</button> : ''
 
         return (<div>
 

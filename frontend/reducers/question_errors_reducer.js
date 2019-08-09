@@ -7,8 +7,7 @@ import {
     Object.freeze(state);
     switch (action.type) {
       case RECEIVE_QUESTION_ERRORS:  
-            
-        return action.errors;
+        return action.errors.responseJSON;
       case RECEIVE_QUESTION:
         return [];
       default:

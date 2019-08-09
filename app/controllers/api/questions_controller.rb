@@ -53,7 +53,7 @@ class Api::QuestionsController < ApplicationController
             @topics = Topic.all
             render :show
         else
-            render json: [@question.errors.full_messages], status: 401
+            render json: @question.errors.full_messages, status: 401
         end
 
     end

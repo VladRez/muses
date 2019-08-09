@@ -16,10 +16,7 @@ export const receiveQuestion = (payload) =>({
 })
 
 export const receiveQuestionErrors = (errors) =>{
-    
-    debugger
     return {
-   
     type: RECEIVE_QUESTION_ERRORS,
     errors
 }}
@@ -48,9 +45,8 @@ export const createQuestion = (newQuestion) => (dispatch) =>{
     return APIUtil.createQuestion(newQuestion).then(((retQuestion)=>dispatch(receiveQuestion(retQuestion))),((err)=>dispatch(receiveQuestionErrors(err))))
 }
 
-export const updateQuestion = (question) => (dispatch =>{
-    return APIUtil.updateQuestion(question).then(question=>(dispatch(receiveQuestion(question)), 
-    err=>(dispatch(receiveQuestionErrors(err)))))
+export const updateQuestion = (updatedQuestion) => (dispatch =>{
+    return APIUtil.updateQuestion(updatedQuestion).then(((retQuestion)=>dispatch(receiveQuestion(retQuestion))),((err)=>dispatch(receiveQuestionErrors(err))))
 })
 
 export const searchQuestion = (question, query) => (dispatch) =>(
