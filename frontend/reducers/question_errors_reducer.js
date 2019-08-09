@@ -1,17 +1,16 @@
 import {
-    RECEIVE_QUESTION_ERRORS,
-    RECEIVE_QUESTION
-  } from '../actions/question_actions';
-  
-  export default (state = [], action) => {
-    Object.freeze(state);
-    switch (action.type) {
-      case RECEIVE_QUESTION_ERRORS:  
-        return action.errors.responseJSON;
-      case RECEIVE_QUESTION:
-        return [];
-      default:
-        return state;
-    }
-  };
-  
+  RECEIVE_QUESTION_ERRORS,
+  RECEIVE_QUESTION
+} from "../actions/question_actions";
+
+export default (state = [], action) => {
+  Object.freeze(state);
+  switch (action.type) {
+    case RECEIVE_QUESTION_ERRORS:
+      return action.errors.responseJSON;
+    case RECEIVE_QUESTION:
+      return [];
+    default:
+      return state;
+  }
+};

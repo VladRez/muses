@@ -1,23 +1,27 @@
-import {connect} from 'react-redux'
-import { receiveAllQuestions} from '../../actions/question_actions'
-import Feed from './feed'
+import { connect } from "react-redux";
+import { receiveAllQuestions } from "../../actions/question_actions";
+import Feed from "./feed";
 
 const mapStateToProps = (state, ownProps) => {
-        let qsts = state.entities.questions
-        let topics = []
-        if (Object.values(qsts).length){
-            topics = Object.values({...Object.values(state.entities.questions).map(qst=>qst.topics).flat()})
-        }
-    return { 
-        discussedTopics: topics
-    }
-}
+  let qsts = state.entities.questions;
+  let topics = [];
+  if (Object.values(qsts).length) {
+    topics = Object.values({
+      ...Object.values(state.entities.questions)
+        .map(qst => qst.topics)
+        .flat()
+    });
+  }
+  return {
+    discussedTopics: topics
+  };
+};
 
-const mapDispatchToProps = (disptach) => {
+const mapDispatchToProps = disptach => {
+  return {};
+};
 
-    return {
-      
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Feed)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Feed);

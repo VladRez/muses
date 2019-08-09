@@ -1,19 +1,16 @@
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
 
-import AnswerIndex from './answer_index'
+import AnswerIndex from "./answer_index";
 
 const mapStateToProps = (state, ownProps) => {
-    
-    return { 
+  return {};
+};
 
-    }
-}
+const mapDispatchToProps = disptach => {
+  return {};
+};
 
-const mapDispatchToProps = (disptach) => {
-
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AnswerIndex)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AnswerIndex);

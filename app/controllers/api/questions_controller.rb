@@ -1,7 +1,6 @@
 class Api::QuestionsController < ApplicationController
 
     def index
-        
         case params[:field]
             when nil
                 @questions = Question.all
@@ -15,8 +14,7 @@ class Api::QuestionsController < ApplicationController
                         merged.any? {|topic| merged.count(topic) > 1}
                     end
                 end
-            when 'user'
-                
+            when 'user'  
                 users = User.all.select {|user| (user.first_name.downcase + user.last_name.downcase).match?(params[:value].downcase)}
                 @questions = users.map {|user| user.questions}.flatten
             when 'question'

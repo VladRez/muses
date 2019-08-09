@@ -1,42 +1,45 @@
-import React from 'react';
+import React from "react";
 import { withRouter } from "react-router";
 
 class AnswerQuestionForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = this.props.answer
-        this.handleSubmit = this.handleSubmit.bind(this)
+  constructor(props) {
+    super(props);
+    this.state = this.props.answer;
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    }
+  update(field) {
+    return e => {
+      this.setState({ [field]: e.target.value });
+    };
+  }
 
-    update(field) {
-        return (e) => {
-            this.setState({ [field]: e.target.value });
-        }
-    }
+  handleSubmit(e) {
+    e.preventDefault();
 
-    handleSubmit(e) {
-        e.preventDefault();
-
-
-        let qId = this.props.match.params.question_id
-        this.props.action(qId, this.state)
-        this.setState(this.props.answer)
-    }
-    render() {
-        return (<div>
-            <form onSubmit={this.handleSubmit} className='questionAnswerForm'>
-                {/* <input 
+    let qId = this.props.match.params.question_id;
+    this.props.action(qId, this.state);
+    this.setState(this.props.answer);
+  }
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit} className="questionAnswerForm">
+          {/* <input 
                 type="text" 
                 placeholder="Answer Question..."
                 value={this.state.answer_body}
                 onChange={this.update('answer_body')}/> */}
-                <textarea onChange={this.update('answer_body')} placeholder="Answer Question..." value={this.state.answer_body}/>
-                <input className="submitButton" type="submit" value="Submit" />
-
-            </form>
-        </div>)
-    }
+          <textarea
+            onChange={this.update("answer_body")}
+            placeholder="Answer Question..."
+            value={this.state.answer_body}
+          />
+          <input className="submitButton" type="submit" value="Submit" />
+        </form>
+      </div>
+    );
+  }
 }
 
 export default withRouter(AnswerQuestionForm);
