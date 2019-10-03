@@ -39,11 +39,11 @@ A Quora clone where questions are asked, answered, and edited by users.
 
 ## Project Design
 
-### MVP Checklist
+### Wiki
 
 + [Backend Routes and API][1]
 + [Frontend Routes][2]
-+ [MVP list][3]
++ [Basic Features][3]
 + [Sample State][4]
 + [Schema][5]
 
