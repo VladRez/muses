@@ -37,6 +37,12 @@ A Quora clone where questions are asked, answered, and edited by users.
 + Redux
 + jQuery
 
+### Docker Services
+
++ db - Postgres
++ web - Rails
++ frontend - React
+
 ## Project Design
 
 ### Wiki
