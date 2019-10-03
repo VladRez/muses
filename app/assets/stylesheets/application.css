@@ -76,7 +76,7 @@ Session Form
 
 
 .loggedOutPage .contentWrapper .bgImage {
-    background: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9r5j.jpg) no-repeat center center fixed;
+    background: url(https://www.wallpaperup.com/uploads/wallpapers/2014/10/02/467044/6327d828d1a186d5253927c2a5145c94-1000.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -85,7 +85,7 @@ Session Form
     height: 100%;
     position: fixed;
     background-color: #fafafaab;
-    filter: blur(10px)
+    /* filter: blur(1px) */
 }
 
 .loggedOutPage .bgContainer{
@@ -481,7 +481,7 @@ QUESTION FEED
     /* background: #f7f7f7; */
     background: #e6e6e6;
     border-radius: 4px;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #666;
 }
 
@@ -509,7 +509,7 @@ QUESTION FEED
 }
 .questionAnswerForm .submitButton,
 .updateQuestionForm .submitButton {
-    margin: 2px 2px;
+    margin: 5px 2px;
 }
 /*question page answer*/
 .uMarginToplg{
@@ -609,7 +609,7 @@ QUESTION FEED
 .answerHeaderContentProfileText .answerHeaderContentItem .userDetails {
     color: #333;
     text-decoration: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .answerHeaderContentProfileText .answerHeaderContentItem .userFacts {
@@ -821,7 +821,7 @@ QUESTION FEED
     padding: 4px 16px;
     min-height: 0;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     background-color: transparent;
 
     /*to fill the form space*/

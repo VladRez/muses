@@ -1,0 +1,895 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ body {
+    height: 100%;
+    color: #333;
+    font-size: 13px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 0;
+    background: #fafafa;
+}
+
+html {
+    height: 100%;
+    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=password], textarea, select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 27px;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(200, 200, 200, 0.3);
+    -webkit-transition: border-color .2s;
+    transition: border-color .2s;
+    -webkit-transition: border-color .2s 180ms ease-in-out 0s;
+    -o-transition: border-color .2s 180ms ease-in-out 0s;
+    transition: border-color .2s 180ms ease-in-out 0s;
+}
+
+button, input, optgroup, select, textarea {
+    color: #333;
+}
+
+/*
+Session Form
+*/
+
+.loggedOutPage .contentWrapper {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+
+
+.loggedOutPage .contentWrapper .bgContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+.loggedOutPage .contentWrapper .bgImage {
+    background: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9r5j.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fafafaab;
+    filter: blur(10px)
+}
+
+.loggedOutPage .bgContainer{
+    z-index: -1;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 0 5px #888;
+    border-radius: 4px;
+    padding-top: 25px;
+    width: 650px;
+    position: absolute;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: hidden;
+    top: 10%
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .projectLogo {
+    margin: auto;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .tagline {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: Georgia, Times, "Times New Roman", "Hiragino Kaku Gothic Pro", "Meiryo", serif;
+    margin: 8px 0 32px;
+    color: #949494;
+    text-align: center;
+}
+
+
+
+/* prevent line from going to the bottom */
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin {
+    padding: 32px;
+    position: relative;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:after, 
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:before {
+    display: flex;
+    content: "";
+    zoom: 1;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signUpLogin:after {
+    clear: both;
+}
+
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup,
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
+    float: left;
+    box-sizing: border-box;
+    width: 50%
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup {
+    padding-right: 32px;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .signup:after {
+    content: "";
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    background-color: #e6e6e6;
+    left: 50%;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .signup, .stackedForm {
+    margin-top: 8px;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .signup .stackedForm label{
+    line-height: 27px;
+}
+
+.firstLastNameGroup .half {
+    width: 49%;
+    float: left;
+}
+
+.firstLastNameGroup .formRow:last-child {
+    padding-left: 4px;
+}
+
+.formRow input {
+    display: block;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.formRow label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: bold;
+}
+
+.submitButton {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: opacity ease-in-out 100ms, color ease-in-out 100ms, background-color ease-in-out 100ms, border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.2);
+    display: inline-block;
+    font-weight: 500;
+    outline: 0;
+    padding: 3px 7px 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #3e78ad;
+    color: #fff;
+    border: 1px solid #3a66ad;
+    box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.6);
+}
+
+.submitButton:active{
+    opacity: .6;
+    box-shadow: none;
+}
+
+.submitButton:hover {
+    text-decoration: none;
+}
+
+.formButtons {
+    margin-top: 16px;
+    text-align: right;
+    font-size: 13px;
+}
+
+.formButtons .submitButton {
+    line-height: 1.4em!important;
+}
+
+.submitButton .demoButton {
+    margin-right: 2px;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login {
+    position: relative;
+    padding-left: 32px;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin .headerLoginTextBox {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.4;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: 32px;
+    margin-bottom: 8px;
+}
+
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=password],
+.loggedOutPage .contentWrapper .baseSignUpContainer .formContainer .login .regularLogin input[type=text]{
+    background-color: #EEE;
+}
+
+.formInputs {
+    padding-top: 10px;
+}
+
+
+.formColumn .submitButton {
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.projectLogo {
+    width: 224px;
+    min-width: 224px;
+    height: 140px;
+    background-size: 224px 63px;
+    background-image: url(https://raw.githubusercontent.com/VladRez/muses/master/app/assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 82px;
+    position: relative;
+}
+
+
+/*
+QUESTION FEED
+*/
+
+.feed {
+    /* background: #fafafa; */
+}
+
+.contentWrapper,
+.questionPage .contentWrapper {
+    width: 1002px;
+    margin: 0 auto;
+    padding-top: 83px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+   
+}
+
+
+.gridPage {
+    margin-left: -30px;
+    font-size: 15px;
+    line-height: 1.4;
+
+    /*fix topics and questions not aligning*/
+    display: flex;
+}
+
+
+.layout3ColLeft .leftColInner {
+    top: 83px;
+    position: static;
+    width: 142px;
+    list-style: none;
+}
+
+.layout3ColLeft .leftColInner ul {
+    list-style: none;
+}
+
+.layout3ColLeft .leftColInner .topicItem {
+    margin-bottom: 8px;
+    padding: 4px;
+    margin-left: -4px;
+    border-radius: 3px;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink {
+    display: flex;
+    text-decoration: none;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink .topicItemLinkImage {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 3px;
+    flex: none!important;
+    position: relative!important;
+}
+
+.layout3ColLeft .leftColInner .topicItem .topicItemLink .topicLabel {
+    display: inline-block;
+    color: #666;
+    margin-left: 8px;
+}
+
+.layout3ColCenter {
+    padding-left: 12px;
+    width: 602px;
+}
+
+.layout3ColCenter {
+    width: 572px;
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+    margin-left: 202px;
+}
+
+.addQuestionPrompt {
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 4px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 8px;
+    padding: 16px;
+    padding-top: 16px;
+}
+
+.addQuestionPrompt {
+    color: #949494;
+    font-size: 13px;
+    text-align: left;
+}
+
+.addQuestionPrompt .userAsksHeader {
+    margin-bottom: 4px;
+    color: #949494;
+}
+
+.addQuestionPromp .askQuestionButton {
+    font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+    font-size: 18px;
+    color: #949494;
+    display: block;
+}
+
+.askQuestionInput {
+    width: 80%;
+    margin-right: 10px;
+}
+
+
+.questionText {
+    font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none
+}
+
+
+
+.feedItem {
+    border: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 4px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 8px;
+    padding: 16px;
+    transition: border-color .5s ease;
+    transition: border-color .5s ease 180ms ease-in-out 0s;
+    padding-top: 16px;
+}
+
+.session-errors {
+    text-align: center;
+}
+
+
+/*QUESTION PAGE*/
+.layout2colMain {
+    width: 572px;
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+    width: 602px;
+}
+
+.questionPage .questionHeader{
+    margin-bottom: 12px;
+    padding-bottom: 4px!important;
+}
+
+
+/* to be deleted*/
+.questionActions{
+
+}
+
+.questionActions a {
+    text-decoration: none;
+    color: crimson;
+}
+
+.questionActions button {
+    margin-left: 2px;
+}
+/*Header Topic List*/
+.questionTopicHeaderList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.questionTopicHeaderList .questionTopicHeaderListItem {
+    margin-right: 4px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    /* float: left; */
+    position: relative;
+    white-space: nowrap;
+    display: inline-block!important;
+    user-select: none;
+    padding: 4px 6px;
+    /* background: #f7f7f7; */
+    background: #e6e6e6;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #666;
+}
+
+.questionTopicHeaderList .questionTopicHeaderListItem a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+.topics_drop_down{
+    margin-right: 4px;
+    
+}
+
+.questionAnswerForm,
+.updateQuestionForm {
+    align-content: flex-end;
+}
+.questionAnswerForm textarea {
+    width: 100%;
+}
+
+.updateQuestionForm input[type="text"] {
+    width: 85%;
+}
+.questionAnswerForm .submitButton,
+.updateQuestionForm .submitButton {
+    margin: 2px 2px;
+}
+/*question page answer*/
+.uMarginToplg{
+    margin-top: 32px!important
+}
+
+.questionPageAnswerHeader {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    padding-bottom: 7px;
+}
+
+
+.answerCount {
+
+}
+
+.questionPageText {
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+}
+
+.questionPage .answerBase {
+    padding: 16px 0;
+    border-top: 1px solid #e2e2e2;
+    position: relative;
+}
+.questionPage .answerBase:first-child{
+    /* border-top: none; */
+}
+
+.answerHeader {
+    margin-top: 0;
+    display: flex!important;
+}
+
+
+.answerHeaderContent {
+    clear: both;
+    position: relative;
+    margin-top: 8px;
+    min-height: 40px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.answerHeaderContentProfileAvatar{
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+    position: relative;
+    display: inline-flex!important;
+}
+
+.answerHeaderContentProfileAvatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.answerHeaderContentProfileText {
+    margin-left: 8px;
+    box-sizing: border-box;
+    word-break: break-word;
+    align-self: center!important;
+    flex: 1 1 auto!important;
+    min-width: 0!important;
+    min-height: 0!important;
+    width: 100%!important;
+}
+
+.answerHeaderContentProfileText .answerHeaderContentItem {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 2px;
+}
+
+.answerHeaderContentProfileText .answerHeaderContentItem .userDetails {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.answerHeaderContentProfileText .answerHeaderContentItem .userFacts {
+    font-size: 13px;
+    color: #949494;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.answerContent {
+    font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-size: 16px!important;
+    line-height: 1.75;
+    display: block;
+    margin-bottom: 0!important;
+    tab-size: 4;
+    word-break: break-word;
+}
+
+/*nav bar*/
+
+.siteHeader{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 800;
+    font-size: 14px;
+    color: #fff;
+    border-top: 2px solid #b92b27;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 3px 2px -2px rgba(200,200,200,0.2);
+    border-top: 0;
+}
+
+.headerInner {
+    width: 1002px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: row!important;
+    display: flex!important;
+}
+
+.headerLogo {
+    z-index: 1;
+    overflow: hidden; 
+    flex: none!important;
+}
+
+.siteHeader .headerLogo a {
+    display: block;
+    width: 80px;
+    min-width: 80px;
+    height: 50px;
+    background-size: 80px 23px;
+    background-image: url(https://raw.githubusercontent.com/VladRez/muses/master/app/assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.siteHeader .headerLogo a span {
+    display: none;
+}
+
+.siteHeader .headerContents {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1 1 auto!important;
+    min-width: 0!important;
+    min-height: 0!important;
+    display: flex!important;
+    margin-left: 8px!important;
+} 
+
+
+.siteHeader .headerNav{
+    float: none;
+    display: table-cell;
+    padding: 0 8px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.siteHeader .rightContents {
+    float: none;
+    display: flex!important;
+    width: 100%;
+    align-items: center!important;
+}
+
+/*search bar*/
+.siteHeader .askBar {
+    padding-left: 0;
+    padding-right: 8px;
+    padding-top: 12px;
+}
+
+.askBar {
+    flex-grow: 1;
+    padding: 10px 0 11px 14px;
+}
+
+.siteHeader .askBar .lookupBarSelector {
+    display: block;
+}
+
+.lookupBarSelector {
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    font-size: 13px;
+}
+
+.siteHeader .askBar .lookupBarSelector .selectorInput {
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding-left: 26px;
+    background: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png) no-repeat 8px center;
+    background-size: 13px;
+    font-size: 15px;
+    line-height: 1.4;
+    display: block;
+    min-height: auto;
+    width: 100%;
+}
+
+
+/**/
+.headerProfile {
+    height: 100%!important;
+}
+
+.askWrapper {
+    width: 100%;
+        box-sizing: border-box;
+    vertical-align: middle;
+    position: static;
+}
+
+
+/*between answer and comments*/
+.answerActionBar {
+    position: relative;
+    margin-bottom: -12px;
+}
+
+/*Comments*/
+
+
+.threadedComments {
+    font-size: 13px;
+    display: block;
+    padding: 16px;
+    margin-top: 16px!important;
+    /* margin-top: 8px; */
+    /* background-color: #fafafa; */
+    background-color: #efefef;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    border-color: #efefef;
+    position: relative;
+    min-height: 32px;
+}
+
+.addCommentGroup {
+    display: flex!important;
+}
+
+.addCommentGroup > form {
+    width: 100%;
+    margin-left: 12px;
+}
+
+.addCommentProfileAvatar {
+    display: inline-flex!important;
+    flex: none!important;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.addCommentProfileAvatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    color: transparent;
+} 
+
+.addCommentInput{
+    margin-left: 12px;
+    position: relative;
+    vertical-align: middle;
+    word-break: normal;
+    font-size: 13px;
+    line-height: 1.5;
+    vertical-align: middle;
+    min-height: 32px;
+    border-radius: 20px!important;
+    padding: 4px 16px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    /*to fill the form space*/
+    width: 80%;
+}
+
+.addCommentButton {
+    border-radius: 10px; 
+    margin-left: 2px;
+}
+
+/*comment list*/
+
+.commentListWrapper {
+    position: relative;
+}
+
+.commentListWrapper .comment {
+    padding-top: 8px;
+}
+
+.commentHeader {
+    display: flex!important;
+}
+
+.commentListWrapper .comment .commentHeader .commentProfileAvatar {
+    flex: none!important;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: visible;
+    
+
+}
+
+.commentListWrapper .comment .commentHeader .commentProfileAvatar img{
+    border: 0;
+    color: transparent;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding-bottom: 2px;
+}
+
+.commentListWrapper .comment .commentHeader .commentDetails {
+    box-sizing: border-box;
+    word-break: break-word;
+    margin-left: 12px;
+}
+
+/*as span*/
+.commentListWrapper .comment .commentHeader .commentProfileFullName {
+    margin-left: 12px;
+}
+
+
+.commentListWrapper .comment .commentHeader .commentDetails .commentMetaData {
+    color: #949494;
+    padding-bottom: 4px;
+    margin-left: 12px;
+}
+
+.commentListWrapper .comment .commentBodyText {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    position: relative;
+    display: inline;
+    tab-size: 4;
+    word-break: break-word;
+}
+
